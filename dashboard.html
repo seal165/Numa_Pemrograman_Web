@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Dashboard</title>
+  
+  <!-- Font Google: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icon FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- File CSS Eksternal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Header Navigasi Utama -->
+  <header class="navbar-header">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="dashboard.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+          <span class="logo-text">numa<span class="dot">.</span></span>
+        </a>
+        <nav class="nav-links">
+          <a href="#" class="nav-item">Belajar</a>
+          <a href="#" class="nav-item">Quiz Kilat</a>
+          <a href="#" class="nav-item">Lab Kesalahan</a>
+          <a href="#" class="nav-item">Flashcard</a>
+          <a href="#" class="nav-item">Misi</a>
+        </nav>
+      </div>
+
+      <div class="navbar-right">
+        <!-- Stat Badges Navbar -->
+        <div class="stat-pill heart"><i class="fa-solid fa-heart"></i> 5</div>
+        <div class="stat-pill flame"><i class="fa-solid fa-fire"></i> 3</div>
+        <div class="stat-pill xp"><i class="fa-solid fa-gem"></i> 105 XP</div>
+        <div class="stat-pill level"><i class="fa-solid fa-graduation-cap"></i> 30</div>
+        
+        <!-- User Avatar & Dropdown Menu -->
+        <div class="profile-dropdown-wrapper">
+          <button type="button" class="avatar-btn">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Jey Raditya Pratama">
+          </button>
+          
+          <!-- Dropdown Menu Statis (Atas-Bawah) -->
+          <div class="profile-dropdown-menu">
+            <div class="dropdown-header">
+              <span class="dropdown-name">Jey Raditya Pratama</span>
+              <span class="dropdown-id">@jey_math</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a href="#modal-edit-profile" class="dropdown-item"><i class="fa-regular fa-user-pen"></i> Edit Profil</a>
+            <a href="#modal-edit-profile" class="dropdown-item"><i class="fa-regular fa-id-card"></i> Detail Akun & ID</a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="dropdown-item danger"><i class="fa-regular fa-arrow-right-from-bracket"></i> Keluar (Logout)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Konten Utama Dashboard -->
+  <main class="dashboard-container">
+    
+    <!-- Hero Profile Card -->
+    <section class="profile-hero-card">
+      <div class="profile-hero-main">
+        <div class="profile-avatar-wrapper">
+          <img src="https://i.pravatar.cc/120?img=12" alt="Jey Raditya Pratama" class="profile-avatar">
+          <span class="verified-badge"><i class="fa-solid fa-check"></i></span>
+        </div>
+        <div class="profile-info">
+          <div class="profile-title-row">
+            <h1>Jey Raditya Pratama</h1>
+            <span class="tag-username">@jey_math</span>
+          </div>
+          <p class="profile-meta">
+            <i class="fa-regular fa-envelope"></i> jey.pratama@sekolah.sch.id &nbsp;•&nbsp; 
+            <strong>98</strong> Mengikuti &nbsp;•&nbsp; 
+            <strong>70</strong> Pengikut
+          </p>
+        </div>
+      </div>
+      <div class="profile-hero-actions">
+        <a href="#modal-edit-profile" class="btn-hero-secondary"><i class="fa-regular fa-pen-to-square"></i> Edit Profil</a>
+        <button type="button" class="btn-hero-primary"><i class="fa-regular fa-share-nodes"></i> Bagikan Portofolio</button>
+      </div>
+
+      <!-- Quick Stats Grid -->
+      <div class="hero-stats-grid">
+        <div class="hero-stat-card">
+          <div class="stat-top">
+            <span class="stat-label">STREAK AKTIF</span>
+            <i class="fa-solid fa-fire icon-flame"></i>
+          </div>
+          <div class="stat-value">3 Hari</div>
+          <div class="streak-days">
+            <span class="day active">S</span>
+            <span class="day active">S</span>
+            <span class="day active">R</span>
+            <span class="day">K</span>
+            <span class="day">J</span>
+            <span class="day">S</span>
+            <span class="day">M</span>
+          </div>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="stat-top">
+            <span class="stat-label">TOTAL XP</span>
+            <i class="fa-solid fa-bolt icon-bolt"></i>
+          </div>
+          <div class="stat-value">105</div>
+          <span class="stat-subtext">Akumulasi belajar</span>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="stat-top">
+            <span class="stat-label">LEVEL SISWA</span>
+            <i class="fa-solid fa-shield icon-shield"></i>
+          </div>
+          <div class="stat-value">Lv. 1 <span class="stat-value-sub">105 / 500 XP</span></div>
+          <div class="progress-bar-sm"><div class="fill" style="width: 21%;"></div></div>
+          <span class="stat-subtext">395 XP lagi ke Level 2</span>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="stat-top">
+            <span class="stat-label">ENERGI LATIHAN</span>
+            <i class="fa-solid fa-heart icon-heart"></i>
+          </div>
+          <div class="stat-value">5 <span class="stat-value-sub">/ 5 Hati</span></div>
+          <span class="stat-status success">• Energi Penuh</span>
+        </div>
+
+        <div class="hero-stat-card highlight">
+          <div class="stat-top">
+            <span class="stat-label">LIGA PYTHAGORAS</span>
+            <i class="fa-solid fa-trophy icon-trophy"></i>
+          </div>
+          <div class="stat-value">#3 <span class="stat-value-sub gold">Klasemen Emas</span></div>
+          <div class="badge-promo-zone">Zona Promosi ↑</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Two-Column Grid -->
+    <div class="dashboard-grid">
+      
+      <!-- Left Column -->
+      <div class="grid-column main-col">
+        
+        <!-- Active Learning Module Card -->
+        <section class="module-card">
+          <div class="module-header-row">
+            <div class="module-badge">
+              <span class="dot-active"></span> Unit Aktif &nbsp;•&nbsp; Modul Lanjutan 1.4
+            </div>
+            <span class="module-percent">46% Selesai</span>
+          </div>
+          <h2 class="module-title">Unit 1: Operasi Bilangan Berpangkat & Aljabar Linear</h2>
+          <p class="module-desc">Pecahkan 7 tantangan soal cerita persamaan linear satu variabel untuk menyelesaikan Bab 1 dan klaim Lencana Master Aljabar!</p>
+
+          <div class="progress-bar-lg"><div class="fill" style="width: 46%;"></div></div>
+
+          <div class="module-footer">
+            <div class="module-meta">
+              <span><i class="fa-regular fa-circle-check"></i> 6/13 Subtopik</span>
+              <span><i class="fa-regular fa-clock"></i> ~35 Menit Lagi</span>
+            </div>
+            <button type="button" class="btn-primary-emerald">Mulai Belajar Sekarang <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </section>
+
+        <!-- XP Growth Statistics -->
+        <section class="dash-section-card">
+          <div class="section-title-row">
+            <div>
+              <h3>Statistik Perkembangan XP</h3>
+              <span class="sub-label">Akun sejak Jan 2023</span>
+            </div>
+            <div class="year-filter-pill">
+              <span class="item">&lt; 2023</span>
+              <span class="item active">2024 (Aktif)</span>
+              <span class="item">2025 &gt;</span>
+            </div>
+          </div>
+          <p class="section-desc">Aktivitas penyelesaian modul matematika, duel kuis, dan latihan adaptif.</p>
+
+          <div class="stats-summary-3col">
+            <div class="summary-box">
+              <span class="icon-box"><i class="fa-solid fa-chart-line"></i></span>
+              <div>
+                <span class="box-title">Total 1 Tahun (2024)</span>
+                <span class="box-val">105 XP</span>
+              </div>
+            </div>
+            <div class="summary-box">
+              <span class="icon-box green"><i class="fa-solid fa-chart-simple"></i></span>
+              <div>
+                <span class="box-title">Rata-rata Bulanan</span>
+                <span class="box-val">35 XP <small>/bln</small></span>
+              </div>
+            </div>
+            <div class="summary-box">
+              <span class="icon-box orange"><i class="fa-solid fa-rocket"></i></span>
+              <div>
+                <span class="box-title">Pertumbuhan Tahunan</span>
+                <span class="box-val green-text">+0% YoY</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Static Chart Bar -->
+          <div class="chart-container">
+            <div class="chart-bars">
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Jan</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Feb</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Mar</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Apr</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Mei</span></div>
+              <div class="bar-item active">
+                <span class="bar-tooltip">★ 105</span>
+                <div class="bar-fill" style="height: 110px;"></div>
+                <span>Jun</span>
+              </div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Jul</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Agu</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Sep</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Okt</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Nov</span></div>
+              <div class="bar-item"><div class="bar-fill" style="height: 10px;"></div><span>Des</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Achievements List Card -->
+        <section class="dash-section-card">
+          <div class="section-title-row">
+            <h3>🏆 Pencapaian Siswa</h3>
+            <a href="#modal-achievements" class="link-action">Lihat Semua (18)</a>
+          </div>
+
+          <div class="achievement-list">
+            <div class="achievement-item">
+              <div class="badge-icon orange"><i class="fa-solid fa-fire"></i></div>
+              <div class="achievement-content">
+                <div class="title-row">
+                  <h4>Api Membara</h4>
+                  <span class="pill-badge">Level 5 Selesai</span>
+                </div>
+                <p>Pertahankan latihan matematika 7 hari berturut-turut tanpa jeda.</p>
+                <div class="progress-bar-sm green"><div class="fill" style="width: 100%;"></div></div>
+              </div>
+            </div>
+
+            <div class="achievement-item">
+              <div class="badge-icon purple"><i class="fa-solid fa-brain"></i></div>
+              <div class="achievement-content">
+                <div class="title-row">
+                  <h4>Orang Bijak</h4>
+                  <span class="pill-badge">Level 8</span>
+                </div>
+                <p>Kumpulkan lebih dari 10.000 XP dari soal matematika adaptif.</p>
+                <div class="progress-bar-sm purple"><div class="fill" style="width: 30%;"></div></div>
+              </div>
+            </div>
+
+            <div class="achievement-item">
+              <div class="badge-icon emerald"><i class="fa-solid fa-calculator"></i></div>
+              <div class="achievement-content">
+                <div class="title-row">
+                  <h4>Pakar Aljabar & Operasi</h4>
+                  <span class="pill-badge success">Sempurna 100%</span>
+                </div>
+                <p>Selesaikan 50 kuis matematika dengan akurasi 100% tanpa salah langkah.</p>
+                <div class="progress-bar-sm green"><div class="fill" style="width: 100%;"></div></div>
+              </div>
+            </div>
+
+            <div class="achievement-item">
+              <div class="badge-icon gold"><i class="fa-solid fa-award"></i></div>
+              <div class="achievement-content">
+                <div class="title-row">
+                  <h4>Juara Liga Pythagoras</h4>
+                  <span class="pill-badge warning">Top 3 Terbuka</span>
+                </div>
+                <p>Mencapai finis di peringkat 3 besar mingguan dalam klasemen liga.</p>
+                <div class="progress-bar-sm yellow"><div class="fill" style="width: 70%;"></div></div>
+              </div>
+            </div>
+
+            <div class="achievement-item locked">
+              <div class="badge-icon gray"><i class="fa-solid fa-lock"></i></div>
+              <div class="achievement-content">
+                <div class="title-row">
+                  <h4>Master Pecahan Campuran</h4>
+                  <span class="pill-badge text-only">32 / 100</span>
+                </div>
+                <p>Tuntaskan 100 operasi pecahan kompleks tanpa bantuan tombol rumus.</p>
+                <div class="progress-bar-sm gray"><div class="fill" style="width: 32%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="grid-column side-col">
+        
+        <!-- Mode Belajar Cepat Side Menu -->
+        <div class="side-menu-cards">
+          <div class="side-card">
+            <div class="card-icon orange"><i class="fa-solid fa-stopwatch"></i></div>
+            <div class="card-info">
+              <h4>Quiz Kilat <span class="tag-xp">+15 XP</span></h4>
+              <p>5 Soal sprint 60 detik</p>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+          </div>
+
+          <div class="side-card">
+            <div class="card-icon purple"><i class="fa-solid fa-cards-blank"></i></div>
+            <div class="card-info">
+              <h4>Flashcard Rumus <span class="tag-sub">24 Kartu</span></h4>
+              <p>Hafal teorema & sifat aljabar</p>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+          </div>
+
+          <div class="side-card">
+            <div class="card-icon red"><i class="fa-solid fa-rotate-left"></i></div>
+            <div class="card-info">
+              <h4>Lab Kesalahan <span class="tag-red">3 Soal</span></h4>
+              <p>Perbaiki jawaban kuis lalu</p>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+          </div>
+        </div>
+
+        <!-- Liga Pythagoras Side Section -->
+        <section class="side-dash-card">
+          <div class="section-title-row">
+            <div>
+              <h3>🏆 Liga Pythagoras</h3>
+              <span class="sub-label">Sisa waktu: 1 Hari 8 Jam</span>
+            </div>
+            <a href="#" class="link-action">Selengkapnya</a>
+          </div>
+
+          <div class="league-promo-banner">
+            ↑ Zona Promosi ke Liga Diamond (Top 3) <i class="fa-solid fa-gem"></i>
+          </div>
+
+          <div class="league-active-rank">
+            <span class="rank-num">#3</span>
+            <img src="https://i.pravatar.cc/80?img=12" alt="User" class="user-avatar-sm">
+            <div class="user-name">Jey (Kamu)</div>
+            <div class="user-xp">105 XP</div>
+          </div>
+        </section>
+
+        <!-- Teman Belajar Side Section -->
+        <section class="side-dash-card">
+          <div class="section-title-row">
+            <h3>Teman Belajar</h3>
+            <div class="pill-tabs-sm">
+              <span class="tab active">Mengikuti (98)</span>
+              <span class="tab">Pengikut (70)</span>
+            </div>
+          </div>
+
+          <div class="friends-list">
+            <div class="friend-item">
+              <div class="friend-avatar bg-mint">J</div>
+              <div class="friend-info">
+                <span class="friend-name">Jono</span>
+                <span class="friend-streak">Streak 7 Hari 🔥</span>
+              </div>
+              <span class="friend-xp">120 XP</span>
+            </div>
+
+            <div class="friend-item">
+              <div class="friend-avatar bg-orange">HL</div>
+              <div class="friend-info">
+                <span class="friend-name">Haechan Lee</span>
+                <span class="friend-streak">Streak 10 Hari 🔥</span>
+              </div>
+              <span class="friend-xp">256 XP</span>
+            </div>
+
+            <div class="friend-item">
+              <div class="friend-avatar bg-purple">MS</div>
+              <div class="friend-info">
+                <span class="friend-name">manusia</span>
+                <span class="friend-streak">Streak 1 Hari 🔥</span>
+              </div>
+              <span class="friend-xp">50 XP</span>
+            </div>
+
+            <div class="friend-item">
+              <div class="friend-avatar bg-blue">RP</div>
+              <div class="friend-info">
+                <span class="friend-name">rkdppf01</span>
+                <span class="friend-streak">Streak 3 Hari 🔥</span>
+              </div>
+              <span class="friend-xp">80 XP</span>
+            </div>
+          </div>
+
+          <a href="#modal-find-friends" class="btn-find-friends">
+            <i class="fa-solid fa-user-plus"></i> Cari Teman Sekelas atau Bagikan Link Ajakan
+          </a>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Bawah -->
+  <footer class="dash-footer">
+    <div class="dash-footer-container">
+      <p>© 2026 Numa Edukasi. Matematika Praktis & Menyenangkan.</p>
+      <div class="footer-links">
+        <a href="#">Bantuan Belajar</a>
+        <a href="#">Privasi</a>
+        <a href="#">Syarat Ketentuan</a>
+        <a href="#">Status Server</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       POP-UP / MODALS (CSS NATIVE :target)
+       ========================================== -->
+
+  <!-- Modal 1: Edit Profil -->
+  <div id="modal-edit-profile" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-regular fa-user-pen"></i> Edit Profil & Akun</h3>
+        <a href="#" class="modal-close">&times;</a>
+      </div>
+      <form class="modal-body" onsubmit="event.preventDefault();">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-user input-icon"></i>
+            <input type="text" value="Jey Raditya Pratama">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ID / Username</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-at input-icon"></i>
+            <input type="text" value="jey_math">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Siswa <small class="text-muted">(Read Only / Tidak Bisa Diubah)</small></label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input type="email" value="jey.pratama@sekolah.sch.id" readonly class="input-readonly">
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" class="btn-modal-cancel">Batal</a>
+          <button type="submit" class="btn-modal-save">Simpan Perubahan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Lihat Semua Pencapaian -->
+  <div id="modal-achievements" class="modal-overlay">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h3>🏆 Semua Pencapaian (18)</h3>
+        <a href="#" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body scrollable">
+        <div class="achievement-grid-2col">
+          <div class="achievement-item">
+            <div class="badge-icon orange"><i class="fa-solid fa-fire"></i></div>
+            <div>
+              <h4>Api Membara</h4>
+              <p>Latihan 7 hari berturut-turut.</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="badge-icon purple"><i class="fa-solid fa-brain"></i></div>
+            <div>
+              <h4>Orang Bijak</h4>
+              <p>Kumpulkan 10.000 XP.</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="badge-icon emerald"><i class="fa-solid fa-calculator"></i></div>
+            <div>
+              <h4>Pakar Aljabar</h4>
+              <p>50 Kuis akurasi 100%.</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="badge-icon gold"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <h4>Juara Liga</h4>
+              <p>Finis 3 besar mingguan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Cari Teman -->
+  <div id="modal-find-friends" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-plus"></i> Cari & Tambah Teman</h3>
+        <a href="#" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fa-solid fa-magnifying-glass input-icon"></i>
+            <input type="text" placeholder="Cari nama, ID, atau email teman...">
+          </div>
+        </div>
+        <div class="invite-share-box">
+          <span>Atau bagikan link undanganmu:</span>
+          <div class="copy-link-wrapper">
+            <input type="text" value="https://numa.id/invite/jey_math" readonly>
+            <button type="button" class="btn-copy">Salin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

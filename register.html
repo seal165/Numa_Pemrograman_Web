@@ -3,53 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Numa - Daftar</title>
-  
-  <!-- Font Google: Plus Jakarta Sans & Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Icon FontAwesome (untuk icon form & sosial) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- File CSS Eksternal -->
+  <title>Numa - Halaman Daftar (Register)</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Header Atas -->
-  <header class="app-header">
+  <!-- Header Logo & Right Link -->
+  <header class="header header-between">
     <div class="logo">
       <div class="logo-icon">
-        <i class="fa-solid fa-plus"></i>
+        <span class="plus">+</span>
+        <span class="dot"></span>
       </div>
-      <span class="logo-text">numa<span class="dot">.</span></span>
+      <span class="logo-text">numa<span class="dot-purple">•</span></span>
     </div>
-    <div class="header-link">
-      Sudah gabung? <a href="login.html" class="link-bold">Masuk</a>
+    <div class="header-nav">
+      Sudah gabung? <a href="login.html" class="nav-link-bold">Masuk</a>
     </div>
   </header>
 
-  <!-- Kontainer Utama -->
-  <main class="main-container">
+  <!-- Container Utama -->
+  <main class="login-container">
     <div class="card">
       
-      <!-- Subtitle & Title -->
-      <div class="badge-profile">
+      <!-- Green Badge -->
+      <div class="badge badge-green">
         <i class="fa-regular fa-shield-check"></i>
-        <span>Profil Akun</span>
+        <i class="fa-solid fa-shield-cat"></i> Profil Akun
       </div>
 
-      <h1 class="card-title">Mulai Petualangan Matematikamu!</h1>
-      <p class="card-subtitle">
+      <!-- Title & Subtitle -->
+      <h1 class="title">Mulai Petualangan Matematikamu!</h1>
+      <p class="subtitle">
         Daftar sekarang untuk mendapatkan lencana penjelajah pertamamu serta, meningkatkan kemampuanmu.
       </p>
 
-      <!-- Form Pendaftaran -->
-      <form class="register-form" onsubmit="event.preventDefault();">
+      <!-- Register Form -->
+      <form action="user/dashboard.html" method="GET">
         
-        <!-- Input 1: Nama Lengkap -->
+        <!-- Input Nama Lengkap -->
         <div class="form-group">
           <div class="label-row">
             <label for="fullname">Nama Lengkap atau Panggilan</label>
@@ -57,95 +51,85 @@
           </div>
           <div class="input-wrapper">
             <i class="fa-regular fa-face-smile input-icon"></i>
-            <input type="text" id="fullname" placeholder="Contoh: Raditya Pratama" required>
+            <input type="text" id="fullname" name="fullname" placeholder="Contoh: Raditya Pratama" required>
           </div>
         </div>
 
-        <!-- Input 2: Email -->
+        <!-- Input Email -->
         <div class="form-group">
           <div class="label-row">
             <label for="email">Email Siswa atau Orang Tua</label>
-            <span class="label-hint success">Verifikasi Cepat</span>
+            <span class="label-hint hint-green">Verifikasi Cepat</span>
           </div>
           <div class="input-wrapper">
             <i class="fa-regular fa-envelope input-icon"></i>
-            <input type="email" id="email" placeholder="nama@sekolah.sch.id atau gmail.com" required>
+            <input type="email" id="email" name="email" placeholder="nama@sekolah.sch.id atau gmail.com" required>
           </div>
         </div>
 
-        <!-- Input 3: Kata Sandi -->
+        <!-- Input Password & Strength Bars -->
         <div class="form-group">
           <div class="label-row">
             <label for="password">Buat Kata Sandi Rahasia</label>
             <span class="label-hint">Minimal 8 Karakter</span>
           </div>
           <div class="input-wrapper">
-            <i class="fa-regular fa-lock input-icon"></i>
-            <input type="password" id="password" placeholder="Kombinasi huruf & angka" required>
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="password" name="password" placeholder="Kombinasi huruf & angka" required>
             <i class="fa-regular fa-eye toggle-password"></i>
           </div>
-          <!-- Bar Indikator Kekuatan Password -->
+          <!-- Indicator Strength Bars -->
           <div class="password-strength">
-            <div class="strength-bar active"></div>
-            <div class="strength-bar"></div>
-            <div class="strength-bar"></div>
-            <div class="strength-bar"></div>
+            <span class="bar active"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </div>
 
-        <!-- Tombol Submit Utama -->
-        <button type="submit" class="btn-primary">
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">
           Lanjut: Pilih Jenjang Belajar <i class="fa-solid fa-arrow-right"></i>
         </button>
-
       </form>
 
-      <!-- Pembatas (Divider) -->
+      <!-- Divider -->
       <div class="divider">
         <span>ATAU DAFTAR INSTAN</span>
       </div>
 
-      <!-- Tombol Login Sosial -->
-      <div class="social-login-grid">
+      <!-- Social Register Buttons -->
+      <div class="social-login">
         <button type="button" class="btn-social">
-          <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          <svg class="google-icon" width="18" height="18" viewBox="0 0 18 18">
+            <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.616z"/>
+            <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/>
+            <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
+            <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
           </svg>
           Akun Google
         </button>
         <button type="button" class="btn-social">
-          <i class="fa-solid fa-building-columns school-icon"></i>
+          <i class="fa-solid fa-building-columns icon-purple"></i>
           Akun Belajar.id / Sekolah
         </button>
       </div>
 
-      <!-- Footer Card -->
-      <div class="card-footer">
-        Sudah punya akun Numa? <a href="login.html" class="link-primary">Masuk di sini <i class="fa-solid fa-arrow-right"></i></a>
+      <!-- Bottom Login Redirect -->
+      <div class="bottom-redirect">
+        Sudah punya akun Numa? <a href="login.html" class="link-purple">Masuk di sini <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
     </div>
   </main>
 
-  <!-- Footer Bawah Page -->
-  <footer class="app-footer">
-    <div class="footer-item">
-      <i class="fa-regular fa-lock"></i>
-      <span>Enkripsi Data SSL 256–bit</span>
-    </div>
-    <span class="bullet">•</span>
-    <div class="footer-item">
-      <i class="fa-solid fa-graduation-cap"></i>
-      <span>Sesuai Kurikulum Merdeka & Nasional</span>
-    </div>
-    <span class="bullet">•</span>
-    <div class="footer-item">
-      <i class="fa-solid fa-users"></i>
-      <span>Aman & Ramah Pelajar</span>
-    </div>
+  <!-- Page Footer Info -->
+  <footer class="footer-info">
+    <span><i class="fa-solid fa-lock green-text"></i> Enkripsi Data SSL 256-bit</span>
+    <span class="dot-separator">•</span>
+    <span><i class="fa-solid fa-graduation-cap purple-text"></i> Sesuai Kurikulum Merdeka & Nasional</span>
+    <span class="dot-separator">•</span>
+    <span><i class="fa-solid fa-people-group orange-text"></i> Aman & Ramah Pelajar</span>
   </footer>
 
 </body>

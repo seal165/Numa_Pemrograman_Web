@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa Admin Pusat — Tambah Kursus</title>
+  <link rel="stylesheet" href="../css/style-admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Style khusus untuk elemen Form (Hanya berlaku di halaman ini) -->
+  <style>
+    .form-card { padding: 32px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+    .form-group { display: flex; flex-direction: column; margin-bottom: 24px; }
+    .form-group label { font-size: 13px; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+    .form-control {
+      width: 100%; padding: 12px 16px; border: 1px solid var(--border-color);
+      border-radius: 8px; font-family: inherit; font-size: 14px; color: var(--text-main);
+      background: white; outline: none; transition: all 0.2s ease;
+    }
+    .form-control:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(91, 76, 230, 0.1); }
+    .form-control::placeholder { color: #94a3b8; }
+    textarea.form-control { resize: vertical; min-height: 120px; }
+    .form-actions { display: flex; justify-content: flex-end; gap: 12px; border-top: 1px solid var(--border-color); padding-top: 24px; margin-top: 8px; }
+    @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 20px; } }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigasi Admin -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+      <div class="logo-text-group">
+        <span class="logo-text">numa<span class="dot-purple">.</span></span>
+        <span class="logo-tag">ADMIN PUSAT</span>
+      </div>
+    </div>
+    <div class="nav-section">
+      <span class="section-label">WORKSPACE</span>
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-border-all"></i> Ringkasan</a>
+      <a href="pengguna.html" class="nav-item"><i class="fa-solid fa-users"></i> Pengguna <span class="badge-count">12</span></a>
+      <a href="kursus.html" class="nav-item active"><i class="fa-solid fa-book-open"></i> Kursus & Materi</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> Aktivitas Belajar</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Analitik</a>
+    </div>
+    <div class="nav-section">
+      <span class="section-label">OPERASIONAL</span>
+      <a href="#" class="nav-item"><i class="fa-regular fa-bell"></i> Notifikasi <span class="badge-count purple">4</span></a>
+      <a href="#" class="nav-item"><i class="fa-regular fa-file-lines"></i> Laporan</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> Pengaturan</a>
+    </div>
+    <div class="system-status-card">
+      <div class="status-indicator"><span class="dot-status green"></span><span class="status-title">Semua sistem normal</span></div>
+      <p>Sinkronisasi data terakhir 2 menit lalu.</p>
+    </div>
+    <div class="sidebar-footer">
+      <a href="#" class="btn-help"><i class="fa-regular fa-circle-question"></i> Pusat bantuan admin</a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="admin-wrapper">
+    <!-- Top Header -->
+    <header class="topbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Cari pengguna, kursus, atau laporan...">
+      </div>
+      <div class="topbar-right">
+        <div class="date-badge"><i class="fa-regular fa-calendar"></i> 2 Oktober 2026</div>
+        <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="notification-dot"></span></button>
+        <div class="profile-menu">
+          <div class="avatar-circle">AR</div>
+          <div class="profile-info"><span class="profile-name">Alya Rahmani</span><span class="profile-role">Super Admin</span></div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <div class="dashboard-body">
+      <!-- Judul Halaman & Breadcrumb -->
+      <div style="margin-top: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2 style="font-size: 24px; font-weight: 800; color: var(--text-main);">Tambah Kursus Baru</h2>
+          <p class="subtitle" style="font-size: 14px;">Lengkapi informasi di bawah ini untuk membuat kursus baru.</p>
+        </div>
+        <a href="kursus.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+      </div>
+
+      <!-- Form Card -->
+      <section class="card form-card">
+        <form action="#" method="POST">
+          
+          <div class="form-group">
+            <label for="nama-kursus">Nama Kursus</label>
+            <input type="text" id="nama-kursus" class="form-control" placeholder="Contoh: Aljabar Linear Dasar" required>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="kategori">Kategori</label>
+              <select id="kategori" class="form-control" required>
+                <option value="" disabled selected>Pilih Kategori</option>
+                <option value="matematika">Matematika</option>
+                <option value="sains">Sains</option>
+                <option value="bahasa">Bahasa</option>
+                <option value="sosial">Sosial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tingkat">Tingkat Kelas</label>
+              <select id="tingkat" class="form-control" required>
+                <option value="" disabled selected>Pilih Tingkat</option>
+                <option value="4-6">Kelas 4–6</option>
+                <option value="7-8">Kelas 7–8</option>
+                <option value="9">Kelas 9</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="deskripsi">Deskripsi Kursus</label>
+            <textarea id="deskripsi" class="form-control" placeholder="Jelaskan secara singkat mengenai kursus ini..."></textarea>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="status">Status Kursus</label>
+              <select id="status" class="form-control">
+                <option value="draft">Draft (Simpan sebagai konsep)</option>
+                <option value="aktif">Aktif (Langsung terbitkan)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="thumbnail">Thumbnail Kursus</label>
+              <input type="file" id="thumbnail" class="form-control" accept="image/*" style="padding: 9px 16px;">
+            </div>
+          </div>
+
+          <!-- Tombol Aksi -->
+          <div class="form-actions">
+            <a href="kursus.html" class="btn btn-outline">Batal</a>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Simpan Kursus</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

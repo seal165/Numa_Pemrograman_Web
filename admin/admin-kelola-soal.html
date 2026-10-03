@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa Admin Pusat — Kelola Soal Kuis</title>
+  <link rel="stylesheet" href="../css/style-admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- Sidebar Navigasi Admin -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+      <div class="logo-text-group">
+        <span class="logo-text">numa<span class="dot-purple">.</span></span>
+        <span class="logo-tag">ADMIN PUSAT</span>
+      </div>
+    </div>
+    <div class="nav-section">
+      <span class="section-label">WORKSPACE</span>
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-border-all"></i> Ringkasan</a>
+      <a href="pengguna.html" class="nav-item"><i class="fa-solid fa-users"></i> Pengguna <span class="badge-count">12</span></a>
+      <a href="kursus.html" class="nav-item active"><i class="fa-solid fa-book-open"></i> Kursus & Materi</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> Aktivitas Belajar</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Analitik</a>
+    </div>
+    <div class="nav-section">
+      <span class="section-label">OPERASIONAL</span>
+      <a href="#" class="nav-item"><i class="fa-regular fa-bell"></i> Notifikasi <span class="badge-count purple">4</span></a>
+      <a href="#" class="nav-item"><i class="fa-regular fa-file-lines"></i> Laporan</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> Pengaturan</a>
+    </div>
+    <div class="system-status-card">
+      <div class="status-indicator"><span class="dot-status green"></span><span class="status-title">Semua sistem normal</span></div>
+      <p>Sinkronisasi data terakhir 2 menit lalu.</p>
+    </div>
+    <div class="sidebar-footer">
+      <a href="#" class="btn-help"><i class="fa-regular fa-circle-question"></i> Pusat bantuan admin</a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="admin-wrapper">
+    <header class="topbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Cari pengguna, kursus, atau laporan...">
+      </div>
+      <div class="topbar-right">
+        <div class="date-badge"><i class="fa-regular fa-calendar"></i> 2 Oktober 2026</div>
+        <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="notification-dot"></span></button>
+        <div class="profile-menu">
+          <div class="avatar-circle">AR</div>
+          <div class="profile-info"><span class="profile-name">Alya Rahmani</span><span class="profile-role">Super Admin</span></div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-body">
+      <!-- Judul & Breadcrumb -->
+      <div style="margin-top: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h2 style="font-size: 24px; font-weight: 800; color: var(--text-main);">Kelola Soal Kuis</h2>
+          <p class="subtitle" style="font-size: 14px;">Aljabar Linear Dasar • Bab 1: Matriks & Vektor</p>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <a href="admin-kursus.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+          <button class="btn btn-primary"><i class="fa-solid fa-eye"></i> Pratinjau Kuis</button>
+        </div>
+      </div>
+
+      <!-- Info Kuis -->
+      <section class="card" style="padding: 20px;">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <div class="stat-icon purple"><i class="fa-solid fa-clipboard-question"></i></div>
+          <div style="flex: 1;">
+            <h3 style="font-size: 16px; font-weight: 700;">Kuis Bab 1 — Matriks & Vektor</h3>
+            <p class="subtitle">Total 3 soal • Waktu pengerjaan 15 menit • Nilai kelulusan 70%</p>
+          </div>
+          <span class="badge-status green">Aktif</span>
+        </div>
+      </section>
+
+      <!-- Form Soal -->
+      <section class="card form-card">
+        <form action="#" method="POST">
+
+          <!-- ========== SOAL 1 ========== -->
+          <div class="soal-card">
+            <div class="soal-header">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span class="soal-number">1</span>
+                <strong style="font-size: 14px;">Soal Pilihan Ganda</strong>
+              </div>
+              <button type="button" class="btn-remove"><i class="fa-solid fa-trash"></i> Hapus</button>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label>Pertanyaan</label>
+              <textarea class="form-control" placeholder="Tulis pertanyaan di sini...">Berapakah hasil dari perkalian matriks A (2x2) dengan matriks identitas I (2x2)?</textarea>
+            </div>
+
+            <label style="font-size: 13px; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 8px;">
+              Pilihan Jawaban <span style="color: var(--text-muted); font-weight: 500;">(Pilih radio untuk menandai jawaban benar)</span>
+            </label>
+
+            <div class="opsi-list">
+              <div class="opsi-item">
+                <input type="radio" name="jawaban_1" value="A">
+                <span class="label-abjad">A</span>
+                <input type="text" value="2A" placeholder="Tulis pilihan jawaban...">
+              </div>
+              <div class="opsi-item correct">
+                <input type="radio" name="jawaban_1" value="B" checked>
+                <span class="label-abjad">B</span>
+                <input type="text" value="A" placeholder="Tulis pilihan jawaban...">
+              </div>
+              <div class="opsi-item">
+                <input type="radio" name="jawaban_1" value="C">
+                <span class="label-abjad">C</span>
+                <input type="text" value="A²" placeholder="Tulis pilihan jawaban...">
+              </div>
+              <div class="opsi-item">
+                <input type="radio" name="jawaban_1" value="D">
+                <span class="label-abjad">D</span>
+                <input type="text" value="0" placeholder="Tulis pilihan jawaban...">
+              </div>
+            </div>
+
+            <!-- Tips & Pembahasan -->
+            <div class="tips-box">
+              <div class="tips-header">
+                <i class="fa-regular fa-lightbulb"></i>
+                <span>Tips & Pembahasan Jawaban</span>
+              </div>
+              <textarea placeholder="Tulis penjelasan mengapa jawaban tersebut benar, atau tips untuk membantu siswa...">Setiap matriks yang dikalikan dengan matriks identitas akan menghasilkan matriks itu sendiri. Jadi A × I = A.</textarea>
+            </div>
+          </div>
+
+          <!-- ========== SOAL 2 ========== -->
+          <div class="soal-card">
+            <div class="soal-header">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span class="soal-number">2</span>
+                <strong style="font-size: 14px;">Soal Pilihan Ganda</strong>
+              </div>
+              <button type="button" class="btn-remove"><i class="fa-solid fa-trash"></i> Hapus</button>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label>Pertanyaan</label>
+              <textarea class="form-control" placeholder="Tulis pertanyaan di sini...">Manakah yang termasuk matriks diagonal?</textarea>
+            </div>
+
+            <label style="font-size: 13px; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 8px;">
+              Pilihan Jawaban <span style="color: var(--text-muted); font-weight: 500;">(Pilih radio untuk menandai jawaban benar)</span>
+            </label>
+
+            <div class="opsi-list">
+              <div class="opsi-item">
+                <input type="radio" name="jawaban_2" value="A">
+                <span class="label-abjad">A</span>
+                <input type="text" value="Matriks dengan semua elemen nol" placeholder="Tulis pilihan jawaban...">
+              </div>
+              <div class="opsi-item">
+                <input type="radio" name="jawaban_2" value="B">
+                <span class="label-abjad">B</span>
+                <input type="text" value="Matriks dengan semua elemen 1" placeholder="Tulis pilihan jawaban...">
+              </div>
+              <div class="opsi-item correct">
+                <input type="radio" name="jawaban_2" value="C" checked>
+                <span class="label-abjad">C</span>
+                <input type="text" value="Matriks dengan elemen non-nol hanya pada diagonal utama" placeholder="Tulis pilihan jawaban...">
+              </div>
+            </div>
+
+            <div class="tips-box">
+              <div class="tips-header">
+                <i class="fa-regular fa-lightbulb"></i>
+                <span>Tips & Pembahasan Jawaban</span>
+              </div>
+              <textarea placeholder="Tulis penjelasan...">Matriks diagonal adalah matriks persegi yang semua elemennya nol, kecuali pada diagonal utama.</textarea>
+            </div>
+          </div>
+
+          <!-- Tombol Tambah Soal -->
+          <button type="button" class="btn-tambah-soal">
+            <i class="fa-solid fa-plus"></i> Tambah Soal Baru
+          </button>
+
+          <!-- Tombol Aksi -->
+          <div class="form-actions">
+            <a href="kursus.html" class="btn btn-outline">Batal</a>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Simpan Semua Soal</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

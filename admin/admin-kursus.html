@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa Admin Pusat — Kursus & Materi</title>
+  <link rel="stylesheet" href="../css/style-admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar Navigasi Admin -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+      <div class="logo-text-group">
+        <span class="logo-text">numa<span class="dot-purple">.</span></span>
+        <span class="logo-tag">ADMIN PUSAT</span>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <span class="section-label">WORKSPACE</span>
+      <a href="index.html" class="nav-item">
+        <i class="fa-solid fa-border-all"></i> Ringkasan
+      </a>
+      <a href="pengguna.html" class="nav-item">
+        <i class="fa-solid fa-users"></i> Pengguna
+        <span class="badge-count">12</span>
+      </a>
+      <!-- Menu Kursus & Materi sekarang Active -->
+      <a href="kursus.html" class="nav-item active">
+        <i class="fa-solid fa-book-open"></i> Kursus & Materi
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-chart-line"></i> Aktivitas Belajar
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i> Analitik
+      </a>
+    </div>
+
+    <div class="nav-section">
+      <span class="section-label">OPERASIONAL</span>
+      <a href="#" class="nav-item">
+        <i class="fa-regular fa-bell"></i> Notifikasi
+        <span class="badge-count purple">4</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-regular fa-file-lines"></i> Laporan
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-gear"></i> Pengaturan
+      </a>
+    </div>
+
+    <div class="system-status-card">
+      <div class="status-indicator">
+        <span class="dot-status green"></span>
+        <span class="status-title">Semua sistem normal</span>
+      </div>
+      <p>Sinkronisasi data terakhir 2 menit lalu.</p>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="#" class="btn-help">
+        <i class="fa-regular fa-circle-question"></i> Pusat bantuan admin
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="admin-wrapper">
+
+    <!-- Top Header -->
+    <header class="topbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Cari pengguna, kursus, atau laporan...">
+      </div>
+
+      <div class="topbar-right">
+        <div class="date-badge">
+          <i class="fa-regular fa-calendar"></i> 2 Oktober 2026
+        </div>
+        <button class="icon-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="notification-dot"></span>
+        </button>
+        <div class="profile-menu">
+          <div class="avatar-circle">AR</div>
+          <div class="profile-info">
+            <span class="profile-name">Alya Rahmani</span>
+            <span class="profile-role">Super Admin</span>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <div class="dashboard-body">
+
+      <!-- Judul Halaman -->
+      <div style="margin-top: 8px; margin-bottom: 8px;">
+        <h2 style="font-size: 24px; font-weight: 800; color: var(--text-main);">Kursus & Materi</h2>
+        <p class="subtitle" style="font-size: 14px;">Kelola kurikulum, modul pembelajaran, dan materi pendukung.</p>
+      </div>
+
+      <!-- Statistik Ringkas Kursus (Menggunakan 4 kolom bawaan CSS) -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon purple"><i class="fa-solid fa-book-open"></i></div>
+            <span class="badge-growth purple">+6 bulan ini</span>
+          </div>
+          <div class="stat-number">128</div>
+          <div class="stat-desc"><strong>Total Kursus</strong></div>
+          <div class="stat-sub">14 kursus diperbarui</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon blue"><i class="fa-solid fa-file-lines"></i></div>
+            <span class="badge-growth blue">+12 bulan ini</span>
+          </div>
+          <div class="stat-number">1.450</div>
+          <div class="stat-desc"><strong>Total Materi</strong></div>
+          <div class="stat-sub">Modul & kuis interaktif</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon green"><i class="fa-solid fa-users"></i></div>
+            <span class="badge-growth green">+8,4% bulan ini</span>
+          </div>
+          <div class="stat-number">48.275</div>
+          <div class="stat-desc"><strong>Siswa Terdaftar</strong></div>
+          <div class="stat-sub">Di seluruh kursus</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon orange"><i class="fa-solid fa-star"></i></div>
+            <span class="badge-growth orange">+0,2 poin</span>
+          </div>
+          <div class="stat-number">4.8<span style="font-size: 16px; color: var(--text-muted);">/5</span></div>
+          <div class="stat-desc"><strong>Rating Rata-rata</strong></div>
+          <div class="stat-sub">Berdasarkan 12.840 ulasan</div>
+        </div>
+      </section>
+
+      <!-- Tabel Kursus -->
+      <section class="card table-card">
+        <div class="card-header">
+          <div>
+            <h3>Daftar Kursus</h3>
+            <p class="subtitle">Menampilkan seluruh kursus yang tersedia di platform.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-outline"><i class="fa-solid fa-filter"></i> Filter Kategori</button>
+            <a href="admin-tambah-kursus.html"><button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Tambah Kursus</button></a>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>NAMA KURSUS</th>
+                <th>KATEGORI</th>
+                <th>MATERI</th>
+                <th>SISWA</th>
+                <th>STATUS</th>
+                <th class="text-right">TINDAKAN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle purple-bg"><i class="fa-solid fa-xmark"></i></div>
+                    <div>
+                      <div class="user-name">Aljabar Linear Dasar</div>
+                      <div class="user-email">Kelas 7–8 • Matematika</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status purple">Matematika</span></td>
+                <td><strong>24</strong> <span class="sub-text">Materi</span></td>
+                <td><strong>12.840</strong> <span class="sub-text">Siswa</span></td>
+                <td><span class="badge-status green">Aktif</span></td>
+                <td class="text-right">
+                  <a href="admin-edit-kursus.html" class="btn-table"><i class="fa-solid fa-pen"></i> Edit</a>
+                  <a href="admin-kelola-soal.html" class="btn-table"><i class="fa-solid fa-plus"></i> Kelola Soal</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle green-bg"><i class="fa-solid fa-leaf"></i></div>
+                    <div>
+                      <div class="user-name">Operasi Bilangan</div>
+                      <div class="user-email">Kelas 4–6 • Matematika</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status purple">Matematika</span></td>
+                <td><strong>18</strong> <span class="sub-text">Materi</span></td>
+                <td><strong>10.462</strong> <span class="sub-text">Siswa</span></td>
+                <td><span class="badge-status green">Aktif</span></td>
+                <td class="text-right">
+                  <a href="admin-edit-kursus.html" class="btn-table"><i class="fa-solid fa-pen"></i> Edit</a>
+                  <a href="admin-kelola-soal.html" class="btn-table"><i class="fa-solid fa-plus"></i> Kelola Soal</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle orange-bg"><i class="fa-solid fa-shapes"></i></div>
+                    <div>
+                      <div class="user-name">Geometri & Pythagoras</div>
+                      <div class="user-email">Kelas 8–9 • Matematika</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status purple">Matematika</span></td>
+                <td><strong>15</strong> <span class="sub-text">Materi</span></td>
+                <td><strong>8.920</strong> <span class="sub-text">Siswa</span></td>
+                <td><span class="badge-status orange">Draft</span></td>
+                <td class="text-right">
+                  <a href="admin-edit-kursus.html" class="btn-table"><i class="fa-solid fa-pen"></i> Edit</a>
+                  <a href="admin-kelola-soal.html" class="btn-table"><i class="fa-solid fa-plus"></i> Kelola Soal</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle blue-bg"><i class="fa-solid fa-chart-column"></i></div>
+                    <div>
+                      <div class="user-name">Statistika Dasar</div>
+                      <div class="user-email">Kelas 9 • Matematika</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status purple">Matematika</span></td>
+                <td><strong>12</strong> <span class="sub-text">Materi</span></td>
+                <td><strong>7.315</strong> <span class="sub-text">Siswa</span></td>
+                <td><span class="badge-status green">Aktif</span></td>
+                <td class="text-right">
+                  <a href="admin-edit-kursus.html" class="btn-table"><i class="fa-solid fa-pen"></i> Edit</a>
+                  <a href="admin-kelola-soal.html" class="btn-table"><i class="fa-solid fa-plus"></i> Kelola Soal</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle red-bg"><i class="fa-solid fa-flask"></i></div>
+                    <div>
+                      <div class="user-name">Pengantar IPA Terpadu</div>
+                      <div class="user-email">Kelas 7 • Sains</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status blue">Sains</span></td>
+                <td><strong>20</strong> <span class="sub-text">Materi</span></td>
+                <td><strong>5.120</strong> <span class="sub-text">Siswa</span></td>
+                <td><span class="badge-status green">Aktif</span></td>
+                <td class="text-right">
+                  <a href="admin-edit-kursus.html" class="btn-table"><i class="fa-solid fa-pen"></i> Edit</a>
+                  <a href="admin-kelola-soal.html" class="btn-table"><i class="fa-solid fa-plus"></i> Kelola Soal</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <span class="table-info">Menampilkan 5 dari 128 kursus</span>
+          <div class="pagination">
+            <button class="btn-page"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="btn-page active">1</button>
+            <button class="btn-page">2</button>
+            <button class="btn-page">3</button>
+            <button class="btn-page">...</button>
+            <button class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>

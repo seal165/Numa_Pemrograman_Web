@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa Admin Pusat — Aktivitas Belajar</title>
+  <link rel="stylesheet" href="../css/style-admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar Navigasi Admin -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo-icon"><i class="fa-solid fa-plus"></i></div>
+      <div class="logo-text-group">
+        <span class="logo-text">numa<span class="dot-purple">.</span></span>
+        <span class="logo-tag">ADMIN PUSAT</span>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <span class="section-label">WORKSPACE</span>
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-border-all"></i> Ringkasan</a>
+      <a href="pengguna.html" class="nav-item"><i class="fa-solid fa-users"></i> Pengguna <span class="badge-count">12</span></a>
+      <a href="kursus.html" class="nav-item"><i class="fa-solid fa-book-open"></i> Kursus & Materi</a>
+      <!-- Menu Aktivitas Belajar sekarang Active -->
+      <a href="aktivitas-belajar.html" class="nav-item active"><i class="fa-solid fa-chart-line"></i> Aktivitas Belajar</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Analitik</a>
+    </div>
+
+    <div class="nav-section">
+      <span class="section-label">OPERASIONAL</span>
+      <a href="#" class="nav-item"><i class="fa-regular fa-bell"></i> Notifikasi <span class="badge-count purple">4</span></a>
+      <a href="#" class="nav-item"><i class="fa-regular fa-file-lines"></i> Laporan</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> Pengaturan</a>
+    </div>
+
+    <div class="system-status-card">
+      <div class="status-indicator"><span class="dot-status green"></span><span class="status-title">Semua sistem normal</span></div>
+      <p>Sinkronisasi data terakhir 2 menit lalu.</p>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="#" class="btn-help"><i class="fa-regular fa-circle-question"></i> Pusat bantuan admin</a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="admin-wrapper">
+    <header class="topbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Cari pengguna, kursus, atau laporan...">
+        <span class="search-shortcut">⌘ K</span>
+      </div>
+      <div class="topbar-right">
+        <div class="date-badge"><i class="fa-regular fa-calendar"></i> 2 Oktober 2026</div>
+        <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="notification-dot"></span></button>
+        <div class="profile-menu">
+          <div class="avatar-circle">AR</div>
+          <div class="profile-info"><span class="profile-name">Alya Rahmani</span><span class="profile-role">Super Admin</span></div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-body">
+
+      <!-- Judul Halaman -->
+      <div style="margin-top: 8px; margin-bottom: 8px;">
+        <h2 style="font-size: 24px; font-weight: 800; color: var(--text-main);">Aktivitas Belajar</h2>
+        <p class="subtitle" style="font-size: 14px;">Pantau aktivitas siswa, tren belajar, dan interaksi harian di platform.</p>
+      </div>
+
+      <!-- Statistik Aktivitas -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon purple"><i class="fa-solid fa-bolt"></i></div>
+            <span class="badge-growth purple">+15,7% pekan ini</span>
+          </div>
+          <div class="stat-number">40.126</div>
+          <div class="stat-desc"><strong>Total Sesi Belajar</strong></div>
+          <div class="stat-sub">7 hari terakhir</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon green"><i class="fa-solid fa-clock"></i></div>
+            <span class="badge-growth green">+8,3% pekan ini</span>
+          </div>
+          <div class="stat-number">26 mnt</div>
+          <div class="stat-desc"><strong>Durasi Rata-rata</strong></div>
+          <div class="stat-sub">Per sesi belajar</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon blue"><i class="fa-solid fa-user-check"></i></div>
+            <span class="badge-growth blue">+12,1% bulan ini</span>
+          </div>
+          <div class="stat-number">31.842</div>
+          <div class="stat-desc"><strong>Siswa Aktif</strong></div>
+          <div class="stat-sub">66% dari total pengguna</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-icon orange"><i class="fa-solid fa-fire"></i></div>
+            <span class="badge-growth orange">+4,2% pekan ini</span>
+          </div>
+          <div class="stat-number">3.428</div>
+          <div class="stat-desc"><strong>Streak Aktif</strong></div>
+          <div class="stat-sub">Siswa belajar berturut-turut</div>
+        </div>
+      </section>
+
+      <!-- Chart & Distribusi -->
+      <div class="grid-2-col">
+        <!-- Chart Aktivitas -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Tren Aktivitas Belajar</h3>
+              <p class="subtitle">Jumlah sesi belajar aktif selama 7 hari terakhir</p>
+            </div>
+            <select class="dropdown-select">
+              <option>7 hari terakhir</option>
+              <option>30 hari terakhir</option>
+              <option>Bulan ini</option>
+            </select>
+          </div>
+
+          <div class="chart-summary">
+            <span class="big-number">40.126</span>
+            <span class="sub-label">total sesi</span>
+            <span class="badge-growth green-light"><i class="fa-solid fa-arrow-up"></i> 15,7% dibanding pekan lalu</span>
+          </div>
+
+          <div class="bar-chart-container">
+            <div class="bar-item">
+              <span class="bar-val">4,1k</span>
+              <div class="bar" style="height: 55%;"></div>
+              <span class="bar-day">Sen</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-val">5,4k</span>
+              <div class="bar" style="height: 70%;"></div>
+              <span class="bar-day">Sel</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-val">4,8k</span>
+              <div class="bar" style="height: 62%;"></div>
+              <span class="bar-day">Rab</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-val">6,2k</span>
+              <div class="bar" style="height: 80%;"></div>
+              <span class="bar-day">Kam</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-val">5,8k</span>
+              <div class="bar" style="height: 75%;"></div>
+              <span class="bar-day">Jum</span>
+            </div>
+            <div class="bar-item highlight">
+              <span class="bar-val">7,1k</span>
+              <div class="bar" style="height: 95%;"></div>
+              <span class="bar-day">Sab</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-val">6,7k</span>
+              <div class="bar" style="height: 85%;"></div>
+              <span class="bar-day">Min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distribusi Aktivitas -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Distribusi Aktivitas</h3>
+              <p class="subtitle">Berdasarkan jenis aktivitas belajar</p>
+            </div>
+          </div>
+
+          <div class="course-list">
+            <div class="course-item">
+              <div class="course-icon bg-purple"><i class="fa-solid fa-book-open-reader"></i></div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Membaca Materi</h4>
+                  <span class="course-percent">42%</span>
+                </div>
+                <span class="course-meta">16.853 sesi</span>
+                <div class="progress-bar-sm"><div class="fill purple" style="width: 42%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon bg-green"><i class="fa-solid fa-pen-to-square"></i></div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Mengerjakan Kuis</h4>
+                  <span class="course-percent">28%</span>
+                </div>
+                <span class="course-meta">11.235 sesi</span>
+                <div class="progress-bar-sm"><div class="fill green" style="width: 28%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon bg-orange"><i class="fa-solid fa-video"></i></div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Menonton Video</h4>
+                  <span class="course-percent">18%</span>
+                </div>
+                <span class="course-meta">7.222 sesi</span>
+                <div class="progress-bar-sm"><div class="fill orange" style="width: 18%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon bg-blue"><i class="fa-solid fa-comments"></i></div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Diskusi Forum</h4>
+                  <span class="course-percent">12%</span>
+                </div>
+                <span class="course-meta">4.816 sesi</span>
+                <div class="progress-bar-sm"><div class="fill blue" style="width: 12%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aktivitas Terbaru & Top Siswa -->
+      <div class="grid-2-col">
+        <!-- Log Aktivitas Terbaru -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Aktivitas Terbaru</h3>
+            <a href="#" class="btn-link">Lihat semua</a>
+          </div>
+
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="user-avatar-tag bg-green-light">NA</div>
+              <div class="activity-content">
+                <strong>Nadia Azzahra</strong> menyelesaikan kuis <a href="#">Aljabar Linear Dasar</a> dengan skor 95
+              </div>
+              <span class="time-tag green">4 menit lalu</span>
+            </div>
+
+            <div class="activity-item">
+              <div class="user-avatar-tag bg-orange-light">RP</div>
+              <div class="activity-content">
+                <strong>Raka Pratama</strong> menonton video <a href="#">Operasi Bilangan — Bab 3</a>
+              </div>
+              <span class="time-tag orange">12 menit lalu</span>
+            </div>
+
+            <div class="activity-item">
+              <div class="user-avatar-tag bg-purple-light">DS</div>
+              <div class="activity-content">
+                <strong>Dimas Saputra</strong> memulai sesi <a href="#">Quiz Kilat — Geometri</a>
+              </div>
+              <span class="time-tag purple">18 menit lalu</span>
+            </div>
+
+            <div class="activity-item">
+              <div class="user-avatar-tag bg-blue-light">AS</div>
+              <div class="activity-content">
+                <strong>Aulia Syifa</strong> berdiskusi di forum <a href="#">Statistika Dasar</a>
+              </div>
+              <span class="time-tag blue">27 menit lalu</span>
+            </div>
+
+            <div class="activity-item">
+              <div class="user-avatar-tag bg-red-light">KM</div>
+              <div class="activity-content">
+                <strong>Keisha Maharani</strong> mencapai streak <a href="#">14 hari berturut-turut</a>
+              </div>
+              <span class="time-tag red">39 menit lalu</span>
+            </div>
+
+            <div class="activity-item">
+              <div class="user-avatar-tag bg-green-light">BW</div>
+              <div class="activity-content">
+                <strong>Bagas Wicaksono</strong> menyelesaikan materi <a href="#">Pengantar IPA Terpadu</a>
+              </div>
+              <span class="time-tag green">52 menit lalu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Siswa Paling Aktif -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Siswa Paling Aktif</h3>
+              <p class="subtitle">Berdasarkan jumlah sesi belajar pekan ini</p>
+            </div>
+            <a href="#" class="btn-link">Lihat semua</a>
+          </div>
+
+          <div class="course-list">
+            <div class="course-item">
+              <div class="avatar-circle purple-bg">1</div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Keisha Maharani</h4>
+                  <span class="course-percent">128 sesi</span>
+                </div>
+                <span class="course-meta">Kelas 8 • Streak 14 hari</span>
+                <div class="progress-bar-sm"><div class="fill purple" style="width: 95%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="avatar-circle orange-bg">2</div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Nadia Azzahra</h4>
+                  <span class="course-percent">115 sesi</span>
+                </div>
+                <span class="course-meta">Kelas 7 • Streak 12 hari</span>
+                <div class="progress-bar-sm"><div class="fill orange" style="width: 88%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="avatar-circle green-bg">3</div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Raka Pratama</h4>
+                  <span class="course-percent">102 sesi</span>
+                </div>
+                <span class="course-meta">Kelas 6 • Streak 10 hari</span>
+                <div class="progress-bar-sm"><div class="fill green" style="width: 78%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="avatar-circle blue-bg">4</div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Dimas Saputra</h4>
+                  <span class="course-percent">89 sesi</span>
+                </div>
+                <span class="course-meta">Kelas 9 • Streak 8 hari</span>
+                <div class="progress-bar-sm"><div class="fill blue" style="width: 68%;"></div></div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="avatar-circle red-bg">5</div>
+              <div class="course-info">
+                <div class="course-top">
+                  <h4>Aulia Syifa</h4>
+                  <span class="course-percent">76 sesi</span>
+                </div>
+                <span class="course-meta">Kelas 5 • Streak 6 hari</span>
+                <div class="progress-bar-sm"><div class="fill orange" style="width: 58%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabel Log Aktivitas -->
+      <section class="card table-card">
+        <div class="card-header">
+          <div>
+            <h3>Log Aktivitas Belajar</h3>
+            <p class="subtitle">Riwayat lengkap aktivitas belajar seluruh siswa.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-outline"><i class="fa-solid fa-filter"></i> Filter</button>
+            <button class="btn btn-primary"><i class="fa-solid fa-download"></i> Ekspor Log</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>SISWA</th>
+                <th>AKTIVITAS</th>
+                <th>KURSUS</th>
+                <th>DURASI</th>
+                <th>WAKTU</th>
+                <th class="text-right">TINDAKAN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle purple-bg">KM</div>
+                    <div>
+                      <div class="user-name">Keisha Maharani</div>
+                      <div class="user-email">keisha.m@pelajar.id</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status green">Menyelesaikan Kuis</span></td>
+                <td>Aljabar Linear Dasar</td>
+                <td><strong>24 mnt</strong></td>
+                <td>Hari ini, 09:42</td>
+                <td class="text-right">
+                  <a href="#" class="btn-table">Detail <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle orange-bg">NA</div>
+                    <div>
+                      <div class="user-name">Nadia Azzahra</div>
+                      <div class="user-email">nadia.a@sekolah.id</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status purple">Membaca Materi</span></td>
+                <td>Statistika Dasar</td>
+                <td><strong>18 mnt</strong></td>
+                <td>Hari ini, 09:15</td>
+                <td class="text-right">
+                  <a href="#" class="btn-table">Detail <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle green-bg">RP</div>
+                    <div>
+                      <div class="user-name">Raka Pratama</div>
+                      <div class="user-email">raka.p@gmail.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status blue">Menonton Video</span></td>
+                <td>Operasi Bilangan</td>
+                <td><strong>32 mnt</strong></td>
+                <td>Hari ini, 08:48</td>
+                <td class="text-right">
+                  <a href="#" class="btn-table">Detail <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle blue-bg">DS</div>
+                    <div>
+                      <div class="user-name">Dimas Saputra</div>
+                      <div class="user-email">dimas.s@belajar.id</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status orange">Diskusi Forum</span></td>
+                <td>Geometri & Pythagoras</td>
+                <td><strong>12 mnt</strong></td>
+                <td>Hari ini, 08:20</td>
+                <td class="text-right">
+                  <a href="#" class="btn-table">Detail <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="user-profile-cell">
+                    <div class="avatar-circle red-bg">AS</div>
+                    <div>
+                      <div class="user-name">Aulia Syifa</div>
+                      <div class="user-email">aulia.s@sekolah.id</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge-status green">Menyelesaikan Materi</span></td>
+                <td>Pengantar IPA Terpadu</td>
+                <td><strong>45 mnt</strong></td>
+                <td>Kemarin, 21:30</td>
+                <td class="text-right">
+                  <a href="#" class="btn-table">Detail <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <span class="table-info">Menampilkan 5 dari 40.126 aktivitas</span>
+          <div class="pagination">
+            <button class="btn-page"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="btn-page active">1</button>
+            <button class="btn-page">2</button>
+            <button class="btn-page">3</button>
+            <button class="btn-page">...</button>
+            <button class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

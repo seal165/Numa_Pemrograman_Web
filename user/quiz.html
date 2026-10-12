@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Kuis Matematika</title>
+  <link rel="stylesheet" href="../css/style-user.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="brand-logo">
+        <span class="logo-icon">+</span>
+        <span class="logo-text">numa.</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="path-learning.html" class="nav-item">Belajar</a>
+        <a href="#" class="nav-item active btn-menu-pill">Quiz Kilat</a>
+        <a href="#" class="nav-item">Lab Kesalahan</a>
+        <a href="#" class="nav-item">Flashcard</a>
+        <a href="#" class="nav-item">Misi</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <div class="badge-item streak-badge">
+        <span class="icon">❤️</span> 5
+      </div>
+      <div class="badge-item streak-badge-gold">
+        <span class="icon">🔥</span> 3
+      </div>
+      <div class="badge-item xp-badge">
+        <span class="icon">💎</span> 105 XP
+      </div>
+      <div class="badge-item coin-badge">
+        <span class="icon">🪙</span> 30
+      </div>
+      <div class="user-avatar">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar">
+      </div>
+    </div>
+  </header>
+
+  <!-- Container Utama -->
+  <main class="dashboard-container">
+    
+    <!-- Hero Banner Arena Kuis -->
+    <section class="quiz-hero-banner">
+      <div class="quiz-badge-tag">
+        <span class="icon">⚙️</span> KONFIGURASI SESI ADAPTIF
+      </div>
+      <h1 class="quiz-hero-title">Siapkan Arena <span class="highlight-purple">Kuis Matematika</span></h1>
+      <p class="quiz-hero-desc">
+        Uji pemahaman kalkulasi, asah kecepatan logika, dan kumpulkan XP untuk naik ke Liga Berlian minggu ini.
+      </p>
+    </section>
+
+    <!-- Main Grid Content -->
+    <div class="quiz-grid">
+
+      <!-- Kolom Kiri: Konfigurasi Mode & Topik -->
+      <section class="quiz-main-card">
+        
+        <div class="section-header">
+          <h2>Pilih Mode Pertanyaan</h2>
+          <p>Tentukan apakah ingin fokus pada 1 materi khusus atau tantangan campur.</p>
+        </div>
+
+        <!-- Selection Cards (Mode) -->
+        <div class="mode-selector-grid">
+          
+          <label class="mode-card selected">
+            <input type="radio" name="quiz_mode" checked hidden>
+            <div class="mode-icon-box">
+              <span class="icon">📑</span>
+            </div>
+            <div class="mode-info">
+              <div class="mode-title-row">
+                <h3>Materi Spesifik</h3>
+                <span class="check-badge">✓</span>
+              </div>
+              <p>Latihan terfokus pada sub-topik tertentu yang ingin diperdalam.</p>
+            </div>
+          </label>
+
+          <label class="mode-card">
+            <input type="radio" name="quiz_mode" hidden>
+            <div class="mode-icon-box">
+              <span class="icon">🔀</span>
+            </div>
+            <div class="mode-info">
+              <div class="mode-title-row">
+                <h3>Mix Adaptif (Acak)</h3>
+                <span class="xp-bonus-tag">+25% XP</span>
+              </div>
+              <p>Dikocok pintar dari seluruh materi dengan algoritma retensi spasial.</p>
+            </div>
+          </label>
+
+        </div>
+
+        <!-- Topik Selector -->
+        <div class="topic-section-header">
+          <span>Pilih Satu Topik Materi:</span>
+          <span class="topic-count">4 Topik Tersedia</span>
+        </div>
+
+        <div class="topic-list-container">
+          
+          <!-- Topik 1 (Selected Active) -->
+          <div class="topic-card active">
+            <div class="topic-icon-placeholder"></div>
+            <div class="topic-details">
+              <h3>Aljabar Linear Dasar</h3>
+              <p>Variabel, substitusi nilai, dan penyederhanaan suku sejenis.</p>
+            </div>
+            <div class="topic-action">
+              <span class="badge-mastery green">85% Dikuasai</span>
+              <span class="arrow-icon">❯</span>
+            </div>
+          </div>
+
+          <!-- Topik 2 -->
+          <div class="topic-card">
+            <div class="topic-icon-placeholder"></div>
+            <div class="topic-details">
+              <h3>Operasi Bilangan & Eksponen</h3>
+              <p>Sifat pangkat, bilangan bulat negatif, dan akar kuadrat.</p>
+            </div>
+            <div class="topic-action">
+              <span class="badge-mastery green">92% Dikuasai</span>
+            </div>
+          </div>
+
+          <!-- Topik 3 -->
+          <div class="topic-card">
+            <div class="topic-icon-placeholder"></div>
+            <div class="topic-details">
+              <h3>Persamaan & Pertidaksamaan</h3>
+              <p>Himpunan penyelesaian linear satu variabel dan garis bilangan.</p>
+            </div>
+            <div class="topic-action">
+              <span class="badge-mastery orange">64% Dikuasai</span>
+            </div>
+          </div>
+
+          <!-- Topik 4 -->
+          <div class="topic-card">
+            <div class="topic-icon-placeholder"></div>
+            <div class="topic-details">
+              <h3>Geometri & Pythagoras</h3>
+              <p>Segitiga siku-siku, tripel Pythagoras, dan bidang koordinat.</p>
+            </div>
+            <div class="topic-action">
+              <span class="badge-mastery gray">48% Dikuasai</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Kolom Kanan: Sidebar Ringkasan & Tips -->
+      <aside class="quiz-sidebar">
+
+        <!-- Detail Persiapan -->
+        <div class="card summary-card">
+          <div class="summary-header">
+            <div>
+              <span class="summary-subtitle">RINGKASAN SESI</span>
+              <h2>Detail Persiapan</h2>
+            </div>
+            <div class="icon-circle-purple">
+              <span>📈</span>
+            </div>
+          </div>
+
+          <div class="summary-info-row">
+            <span class="label"><span class="icon">📑</span> Materi</span>
+            <span class="value">Aljabar Linear Dasar</span>
+          </div>
+
+          <button class="btn btn-start-quiz">
+            <span class="icon">🚀</span> Mulai Kuis Kilat Sekarang
+          </button>
+        </div>
+
+        <!-- Tips Numa -->
+        <div class="card tips-card">
+          <div class="tips-icon-box">
+            💡
+          </div>
+          <div class="tips-content">
+            <h4>Tips Kilat Numa</h4>
+            <p>"Kuis kilat melatih insting komputasi tanpa takut kehilangan nyawa atau hati. Jawab dengan cepat untuk melipatgandakan multiplier bonus combo!"</p>
+          </div>
+        </div>
+
+        <!-- Riwayat Terakhir -->
+        <div class="card history-card">
+          <div class="history-header">
+            <h3>Riwayat Terakhir</h3>
+            <a href="#" class="link-all">Lihat Semua</a>
+          </div>
+
+          <div class="history-list">
+            <div class="history-item">
+              <div class="history-status check">✓</div>
+              <div class="history-info">
+                <h4>Aljabar Linear</h4>
+                <p>Kemarin • 9/10 Benar</p>
+              </div>
+              <span class="history-xp">+150 XP</span>
+            </div>
+
+            <div class="history-item">
+              <div class="history-status check">✓</div>
+              <div class="history-info">
+                <h4>Geometri Segitiga</h4>
+                <p>2 Hari Lalu • 8/10 Benar</p>
+              </div>
+              <span class="history-xp">+120 XP</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      © 2024 Numa Edukasi. Matematika Praktis & Menyenangkan.
+    </div>
+    <div class="footer-links">
+      <a href="#">Bantuan Belajar</a>
+      <a href="#">Privasi</a>
+      <a href="#">Syarat Ketentuan</a>
+      <a href="#">Status Server</a>
+    </div>
+  </footer>
+
+</body>
+</html>

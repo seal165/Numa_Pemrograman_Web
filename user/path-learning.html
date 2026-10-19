@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Path Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style-user.css">
+</head>
+<body data-halaman="path">
+
+  <!-- Top Navbar -->
+  <!-- Navbar atas (sama di semua halaman user) -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html" class="brand-logo">
+        <span class="logo-icon"><i class="logo-plus">+</i></span>
+        <span class="logo-text">numa<b>.</b></span>
+      </a>
+      <nav class="nav-menu"><a href="path-learning.html" class="nav-item active">Belajar</a><a href="quiz.html" class="nav-item">Quiz Kilat</a><a href="lab-kesalahan.html" class="nav-item">Lab Kesalahan</a><a href="flashcard.html" class="nav-item">Flashcard</a><a href="misi.html" class="nav-item">Misi</a></nav>
+    </div>
+    <div class="nav-right">
+      <div class="badge-item badge-hati" title="Sisa hati"><i class="ri-heart-3-line"></i> <span data-stat="hati">5</span></div>
+      <div class="badge-item badge-api" title="Streak harian"><i class="ri-fire-line"></i> <span data-stat="streak">3</span></div>
+      <div class="badge-item badge-xp" title="Total XP"><i class="ri-vip-diamond-line"></i> <span data-stat="xp">105</span> XP</div>
+      <div class="badge-item badge-koin" title="Koin kamu"><i class="ri-coins-line"></i> <span data-stat="koin">30</span></div>
+      <a href="dashboard.html" class="user-avatar" id="avatarLink" title="Lihat profil">
+        <img src="https://i.pinimg.com/736x/88/e7/95/88e7950465d991d36234663c6e9d2497.jpg" alt="Avatar" onerror="this.style.display='none'">
+      </a>
+    </div>
+  </header>
+
+  <!-- Container Utama -->
+  <main class="dashboard-container">
+    <div class="learning-grid">
+
+      <!-- Kolom Kiri: Path Learning -->
+      <section class="path-section">
+        
+        <!-- Header Unit Kurikulum -->
+        <div class="unit-banner">
+          <div class="unit-content">
+            <span class="unit-tag"><i class="ri-book-open-line"></i> KURIKULUM MERDEKA • KELAS 4–6</span>
+            <h2>Unit 1: Operasi Bilangan & Fondasi Matematika</h2>
+            <p>Kuasai kelipatan, pembagian presisi, dan trik mental aritmatika dasar sebelum berpetualang ke dunia pecahan.</p>
+            
+            <div class="unit-progress-row">
+              <div class="progress-bar-sm">
+                <div class="progress-fill green" style="width: 60%;"></div>
+              </div>
+              <span class="progress-stars">★ 3 / 5 Bintang</span>
+            </div>
+          </div>
+          
+          <button class="btn btn-concept">
+            <span><i class="ri-lightbulb-line"></i></span> Panduan Konsep
+          </button>
+        </div>
+
+        <!-- Tree / Node Path Pembelajaran -->
+        <div class="path-tree-container">
+          
+          <!-- Node 1: Completed -->
+          <div class="path-node-wrapper node-center">
+            <div class="node-circle completed">
+              <span class="check-icon"><i class="ri-check-line"></i></span>
+              <span class="node-star">★ 3/3</span>
+            </div>
+            <div class="node-title">Penjumlahan & Pengurangan Cepat</div>
+            <div class="node-subtitle green">Tuntas • +45 XP Didapat</div>
+          </div>
+
+          <!-- Connecting Line -->
+          <svg class="connector-line" width="100%" height="60" viewBox="0 0 400 60">
+            <path d="M 200 0 Q 250 30 250 60" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="6,6" fill="none" />
+          </svg>
+
+          <!-- Node 2: Completed -->
+          <div class="path-node-wrapper node-right">
+            <div class="node-circle completed">
+              <span class="check-icon"><i class="ri-check-line"></i></span>
+              <span class="node-star">★ 3/3</span>
+            </div>
+            <div class="node-title">Tabel Perkalian Dasar</div>
+            <div class="node-subtitle green">Tuntas • +60 XP Didapat</div>
+          </div>
+
+          <!-- Connecting Line -->
+          <svg class="connector-line" width="100%" height="60" viewBox="0 0 400 60">
+            <path d="M 250 0 Q 200 30 200 60" stroke="#4f46e5" stroke-width="4" fill="none" />
+          </svg>
+
+          <!-- Tooltip Floating Banner -->
+          <div class="floating-tooltip-wrapper">
+            <div class="floating-tooltip">
+              <i class="ri-flag-line"></i> Mulai Latihan Level 3!
+            </div>
+          </div>
+
+          <!-- Node 3: Current Active Level -->
+          <div class="path-node-wrapper node-center">
+            <a href="course.html" class="node-circle active-play" id="nodeAktif">
+              <span class="play-icon"><i class="ri-play-fill"></i></span>
+            </a>
+            <div class="node-title large">Pembagian & Bilangan Bulat</div>
+            <div class="node-tag-pill"><i class="ri-flashlight-fill"></i> Tantangan 5 Menit</div>
+          </div>
+
+          <!-- Connecting Line -->
+          <svg class="connector-line" width="100%" height="60" viewBox="0 0 400 60">
+            <path d="M 200 0 Q 180 30 200 60" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="6,6" fill="none" />
+          </svg>
+
+          <!-- Node 4: Locked -->
+          <div class="path-node-wrapper node-center">
+            <div class="node-circle locked">
+              <span class="lock-icon"><i class="ri-lock-line"></i></span>
+            </div>
+            <div class="node-title muted">Pecahan Sederhana</div>
+            <div class="node-subtitle muted">Selesaikan Level 3 Dahulu</div>
+          </div>
+
+          <!-- Connecting Line -->
+          <svg class="connector-line" width="100%" height="60" viewBox="0 0 400 60">
+            <path d="M 200 0 Q 200 30 200 60" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="6,6" fill="none" />
+          </svg>
+
+          <!-- Node 5: Reward / Chest Locked -->
+          <div class="path-node-wrapper node-center">
+            <div class="reward-xp-tag"><i class="ri-vip-diamond-line"></i> +150 XP</div>
+            <div class="node-box-reward locked">
+              <span class="star-icon"><i class="ri-star-fill"></i></span>
+              <span class="lock-overlay"><i class="ri-lock-line"></i></span>
+            </div>
+            <div class="node-title bold">Evaluasi Unit 1: Ksatria Angka</div>
+            <div class="node-subtitle muted">Klaim Lencana Emas & Harta Karun</div>
+          </div>
+
+        </div>
+
+        <!-- Next Unit Card -->
+        <div class="next-unit-card">
+          <div class="next-unit-icon">
+            <i class="ri-lock-line"></i>
+          </div>
+          <div class="next-unit-info">
+            <span class="next-unit-tag">UNIT BERIKUTNYA</span>
+            <h3>Unit 2: Pecahan, Desimal & Persentase</h3>
+            <p>Visualisasikan pembagian kue, nilai diskon belanja, dan desimal dalam kehidupan nyata.</p>
+          </div>
+          <button class="btn btn-disabled">
+            Buka setelah Unit 1 Selesai
+          </button>
+        </div>
+
+      </section>
+
+      <!-- Kolom Kanan: Sidebar Stats & Mission -->
+      <aside class="sidebar-section">
+
+        <!-- Status Pembelajaran -->
+        <div class="card status-card">
+          <div class="card-title-row">
+            <h3>Status Pembelajaran</h3>
+            <span class="tag-level-purple">Level 1</span>
+          </div>
+
+          <div class="stats-mini-grid">
+            <div class="stat-mini-box">
+              <span class="stat-icon"><i class="ri-fire-fill"></i></span>
+              <div class="stat-num">3 Hari</div>
+              <div class="stat-label">Streak Aktif</div>
+            </div>
+            <div class="stat-mini-box">
+              <span class="stat-icon"><i class="ri-vip-diamond-line"></i></span>
+              <div class="stat-num">105</div>
+              <div class="stat-label">Total XP</div>
+            </div>
+            <div class="stat-mini-box highlight-green">
+              <span class="stat-icon"><i class="ri-shield-check-fill"></i></span>
+              <div class="stat-num text-green">Top 5%</div>
+              <div class="stat-label">Akurasi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Misi Harian -->
+        <div class="card mission-card">
+          <div class="card-title-row">
+            <h3><span class="icon-check"><i class="ri-checkbox-circle-line"></i></span> Misi Harian</h3>
+            <span class="time-reset">Reset dalam 7 jam</span>
+          </div>
+
+          <div class="mission-item">
+            <div class="mission-label">
+              <span>Selesaikan 2 sesi latihan</span>
+              <span class="mission-count">1 / 2</span>
+            </div>
+            <div class="progress-bar-sm">
+              <div class="progress-fill purple" style="width: 50%;"></div>
+            </div>
+            <div class="mission-reward"><i class="ri-gift-line"></i> Hadiah: +20 XP</div>
+          </div>
+
+          <div class="mission-item">
+            <div class="mission-label">
+              <span>Kumpulkan 80 XP hari ini</span>
+              <span class="mission-count">20 / 80</span>
+            </div>
+            <div class="progress-bar-sm">
+              <div class="progress-fill green" style="width: 25%;"></div>
+            </div>
+            <div class="mission-reward"><i class="ri-heart-3-line"></i> Hadiah: +1 Pemulihan Nyawa</div>
+          </div>
+        </div>
+
+        <!-- Liga Pythagoras -->
+        <div class="card league-card">
+          <div class="card-title-row">
+            <h3><i class="ri-trophy-line"></i> Liga Pythagoras</h3>
+            <span class="tag-promo-green">Zona Promosi</span>
+          </div>
+          <p class="league-desc">Kamu berada di peringkat #3 dari 30 siswa minggu ini. Pertahankan posisimu!</p>
+
+          <div class="league-list">
+            <div class="league-item">
+              <span class="rank-no">1</span>
+              <span class="user-name">Rian Santoso</span>
+              <span class="xp-value">237 XP</span>
+            </div>
+            <div class="league-item">
+              <span class="rank-no">2</span>
+              <span class="user-name">Nadia Putri</span>
+              <span class="xp-value">150 XP</span>
+            </div>
+            <div class="league-item active-user">
+              <span class="rank-no">3</span>
+              <span class="user-name">Kamu (Siswa)</span>
+              <span class="xp-value">105 XP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Peti Harian -->
+        <div class="chest-card">
+          <div class="chest-info">
+            <span class="chest-icon"><i class="ri-gift-line"></i></span>
+            <div>
+              <h4>Peti Harian Siap Dibuka</h4>
+              <p>Dapatkan koin & boost XP gratis</p>
+            </div>
+          </div>
+          <button class="btn btn-claim">Klaim</button>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Numa Edukasi. Matematika Praktis &amp; Menyenangkan.</p>
+    <div class="footer-links">
+      <a href="#" data-popup="bantuan">Bantuan Belajar</a>
+      <a href="#" data-popup="privasi">Privasi</a>
+      <a href="#" data-popup="syarat">Syarat Ketentuan</a>
+      <a href="#" data-popup="status">Status Server</a>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js"></script>
+  <script src="../js/path.js"></script>
+</body>
+</html>

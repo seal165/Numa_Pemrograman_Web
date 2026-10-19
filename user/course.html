@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style-user.css">
+</head>
+<body data-halaman="quiz-play" data-mode="course" data-jumlah="20">
+
+  <!-- navbar simpel: cuma logo, hati, sama koin -->
+  <header class="navbar navbar-play">
+    <div class="nav-left">
+      <a href="dashboard.html" class="brand-logo">
+        <span class="logo-icon"><i class="logo-plus">+</i></span>
+        <span class="logo-text">numa<b>.</b></span>
+      </a>
+    </div>
+    <div class="nav-right">
+      <div class="badge-item badge-hati"><i class="ri-heart-3-line"></i> <span data-stat="hati">5</span></div>
+      <div class="badge-item badge-koin"><i class="ri-coins-line"></i> <span data-stat="koin">30</span></div>
+    </div>
+  </header>
+
+  <main class="play-main">
+
+    <!-- bar atas: tombol keluar + progress -->
+    <div class="play-top">
+      <button class="btn-tutup" id="btnTutup" title="Keluar dari sesi"><i class="ri-close-line"></i></button>
+      <div class="play-progress-wrap">
+        <div class="play-progress-meta">
+          <span id="infoSoal">SOAL 1 DARI 20</span>
+          <span class="hijau" id="infoPersen">0% Selesai</span>
+        </div>
+        <div class="play-progress"><div class="play-progress-fill" id="barProgress"></div></div>
+      </div>
+    </div>
+
+    <!-- area soal -->
+    <section class="play-body" id="areaSoal">
+      <div class="soal-wrap">
+        <div class="soal-meta">
+          <span class="tag-materi" id="tagMateri">MEMUAT...</span>
+          
+        </div>
+        <div class="soal-card">
+          <p class="soal-intro" id="soalIntro">Lagi nyiapin soal...</p>
+          <h1 class="soal-teks" id="soalTeks">...</h1>
+        </div>
+      </div>
+
+      <div class="opsi-grid" id="opsiGrid"></div>
+      <p class="hint-keyboard"><i class="ri-keyboard-line"></i> Pilih kartu atau tekan <b>1, 2, 3, 4</b></p>
+      
+      <!-- kertas coretan (khusus mode course) -->
+      <div class="scratch-card">
+        <div class="scratch-head">
+          <h3><i class="ri-quill-pen-line"></i> Kertas Coretan / Digital Scratchpad</h3>
+          <div class="scratch-tools">
+            <button class="btn-tool" id="btnBersih"><i class="ri-eraser-line"></i> Bersihkan</button>
+            <button class="btn-tool" id="btnGrid"><i class="ri-grid-line"></i> Grid Matrix</button>
+          </div>
+        </div>
+        <div class="scratch-board" id="scratchBoard">
+          <canvas id="scratchCanvas"></canvas>
+          <div class="scratch-placeholder" id="scratchHint">Klik dan tarik mouse/stylus untuk corat-coret hitungan di sini...</div>
+        </div>
+        <div class="scratch-symbols">
+          <span>Tempel simbol cepat:</span>
+          <button class="sym-btn">x</button><button class="sym-btn">y</button><button class="sym-btn">∑</button>
+          <button class="sym-btn">≠</button><button class="sym-btn">±</button><button class="sym-btn">×</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- bar hasil benar/salah (muncul pas udah jawab) -->
+    <div class="feedback-bar" id="feedbackBar" hidden>
+      <div class="fb-kiri">
+        <div class="fb-ikon" id="fbIkon"><i class="ri-check-line"></i></div>
+        <div>
+          <div class="fb-judul" id="fbJudul">Luar Biasa, Benar!</div>
+          <div class="fb-detail" id="fbDetail"></div>
+          <div class="fb-trik"><i class="ri-lightbulb-line"></i> <span>Trik Cepat:</span> <span id="fbTrik"></span></div>
+        </div>
+      </div>
+      <button class="btn-lanjut" id="btnLanjut">Lanjut <kbd>Enter ↵</kbd></button>
+    </div>
+
+    <!-- halaman selesai (disembunyiin dulu) -->
+    <section id="areaHasil" hidden>
+      <div class="hasil-card">
+        <span class="hasil-chip"><i class="ri-checkbox-circle-line"></i> <span id="hasilChip">Course • Unit 1 Operasi Bilangan</span></span>
+        <div class="hasil-medal"><i class="ri-medal-line"></i></div>
+        <span class="hasil-status"><i class="ri-verified-badge-fill"></i> COURSE SELESAI</span>
+        <h1 id="hasilJudul">Kerja Bagus!</h1>
+        <p class="deskripsi" id="hasilDesk"></p>
+        <div class="hasil-stat">
+          <div class="hs-box hs-xp">
+            <div class="hs-label"><i class="ri-vip-diamond-line"></i> TOTAL SKOR</div>
+            <div class="hs-angka">+<span id="hasilXp">0</span> <small>XP</small></div>
+            <span class="hs-chip" id="hasilBonus"><i class="ri-sparkling-line"></i> Bonus Combo</span>
+          </div>
+          <div class="hs-box hs-akurasi">
+            <div class="hs-label"><i class="ri-checkbox-circle-fill"></i> AKURASI JAWABAN</div>
+            <div class="hs-angka"><span id="hasilAkurasi">0</span><small>%</small></div>
+            <span class="hs-chip" id="hasilBenar">0 dari 0 Soal Tepat</span>
+          </div>
+          <div class="hs-box hs-waktu">
+            <div class="hs-label"><i class="ri-timer-fill"></i> WAKTU PENGERJAAN</div>
+            <div class="hs-angka" id="hasilWaktu">00:00</div>
+            <span class="hs-chip" id="hasilRata">~0 Detik / Soal</span>
+          </div>
+        </div>
+        <a href="path-learning.html" class="btn-besar" id="btnKePeta">Lanjut ke Peta Materi <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="hasil-tips">
+        <i class="ri-brain-line"></i>
+        <div>
+          <h4>Tips Belajar Adaptif Numa</h4>
+          <p id="hasilTips">Memuat tips...</p>
+        </div>
+        <a href="flashcard.html" class="btn-putih">Buka Flashcard Rumus</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Numa Edukasi. Matematika Praktis &amp; Menyenangkan.</p>
+    <div class="footer-links">
+      <a href="#" data-popup="bantuan">Bantuan Belajar</a>
+      <a href="#" data-popup="privasi">Privasi</a>
+      <a href="#" data-popup="syarat">Syarat Ketentuan</a>
+      <a href="#" data-popup="status">Status Server</a>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/quiz-play.js"></script>
+</body>
+</html>

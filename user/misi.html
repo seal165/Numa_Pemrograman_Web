@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Misi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style-user.css">
+</head>
+<body data-halaman="misi">
+
+  <!-- Top Navbar -->
+  <!-- Navbar atas (sama di semua halaman user) -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html" class="brand-logo">
+        <span class="logo-icon"><i class="logo-plus">+</i></span>
+        <span class="logo-text">numa<b>.</b></span>
+      </a>
+      <nav class="nav-menu"><a href="path-learning.html" class="nav-item">Belajar</a><a href="quiz.html" class="nav-item">Quiz Kilat</a><a href="lab-kesalahan.html" class="nav-item">Lab Kesalahan</a><a href="flashcard.html" class="nav-item">Flashcard</a><a href="misi.html" class="nav-item active">Misi</a></nav>
+    </div>
+    <div class="nav-right">
+      <div class="badge-item badge-hati" title="Sisa hati"><i class="ri-heart-3-line"></i> <span data-stat="hati">5</span></div>
+      <div class="badge-item badge-api" title="Streak harian"><i class="ri-fire-line"></i> <span data-stat="streak">3</span></div>
+      <div class="badge-item badge-xp" title="Total XP"><i class="ri-vip-diamond-line"></i> <span data-stat="xp">105</span> XP</div>
+      <div class="badge-item badge-koin" title="Koin kamu"><i class="ri-coins-line"></i> <span data-stat="koin">30</span></div>
+      <a href="dashboard.html" class="user-avatar" id="avatarLink" title="Lihat profil">
+        <img src="https://i.pinimg.com/736x/88/e7/95/88e7950465d991d36234663c6e9d2497.jpg" alt="Avatar" onerror="this.style.display='none'">
+      </a>
+    </div>
+  </header>
+
+  <!-- Container Utama -->
+  <main class="dashboard-container">
+    
+    <!-- Hero Banner Misi -->
+    <section class="misi-hero-banner">
+      <div class="hero-left-content">
+        <div class="misi-badge-tag">
+          <span class="icon"><i class="ri-checkbox-circle-line"></i></span> NUMA QUEST ARENA
+        </div>
+        <h1 class="misi-hero-title">Pusat Misi & Tantangan</h1>
+        <p class="misi-hero-desc">
+          Selesaikan target harian, mingguan, dan pencapaian khusus untuk meraih XP, dan Lencana Kehormatan.
+        </p>
+      </div>
+
+      <div class="timer-card-box">
+        <div class="timer-icon-box"><i class="ri-timer-line"></i></div>
+        <div class="timer-details">
+          <span class="timer-label">RESET MISI HARIAN</span>
+          <div class="timer-countdown">
+            <span class="time-val">06</span> <span class="time-unit">jam</span> : <span class="time-val">42</span> <span class="time-unit">menit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <div class="misi-grid">
+
+      <!-- Kolom Kiri: Misi Harian & Mingguan -->
+      <section class="misi-main-section">
+        
+        <!-- SECTION: MISI HARIAN -->
+        <div class="section-title-row">
+          <div class="title-with-icon">
+            <div class="icon-circle purple"><i class="ri-sun-line"></i></div>
+            <div>
+              <h2>Misi Harian</h2>
+              <p class="sub-title">Kumpulkan reward untuk mengamankan streak harian</p>
+            </div>
+          </div>
+          <span class="badge-counter">1 / 3 Selesai</span>
+        </div>
+
+        <div class="misi-list">
+          
+          <!-- Item Misi 1 (Siap Klaim) -->
+          <div class="misi-card ready">
+            <div class="misi-icon-box green"><i class="ri-fire-fill"></i></div>
+            <div class="misi-info">
+              <div class="misi-header">
+                <h3>Pemanasan Pagi</h3>
+                <span class="tag-status green"><i class="ri-check-line"></i> Siap Klaim</span>
+              </div>
+              <p class="misi-desc">Selesaikan 5 latihan kuis matematika.</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar-sm"><div class="progress-fill green" style="width: 100%;"></div></div>
+                <span class="progress-text">5/5 Selesai</span>
+              </div>
+            </div>
+            <button class="btn btn-claim">
+              <span class="icon"><i class="ri-gift-line"></i></span> Klaim +30 XP & 30 Koin
+            </button>
+          </div>
+
+          <!-- Item Misi 2 (Berjalan) -->
+          <div class="misi-card">
+            <div class="misi-icon-box orange"><i class="ri-timer-line"></i></div>
+            <div class="misi-info">
+              <div class="misi-header">
+                <h3>Penjaga Streak</h3>
+                <span class="tag-status gray">Berjalan</span>
+              </div>
+              <p class="misi-desc">Belajar minimal 10 menit tanpa jeda.</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar-sm"><div class="progress-fill orange" style="width: 80%;"></div></div>
+                <span class="progress-text">8/10 menit (80%)</span>
+              </div>
+            </div>
+            <div class="action-reward-group">
+              <span class="reward-pill">+50 XP</span>
+              <button class="btn btn-secondary">Lanjut</button>
+            </div>
+          </div>
+
+          <!-- Item Misi 3 (Belum Dimulai) -->
+          <div class="misi-card">
+            <div class="misi-icon-box blue"><i class="ri-medal-line"></i></div>
+            <div class="misi-info">
+              <div class="misi-header">
+                <h3>Akurasi Ksatria</h3>
+                <span class="tag-status gray">Belum Dimulai</span>
+              </div>
+              <p class="misi-desc">Capai skor minimal 90% pada sesi Course Aljabar.</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar-sm"><div class="progress-fill blue" style="width: 0%;"></div></div>
+                <span class="progress-text">0/1 Sesi</span>
+              </div>
+            </div>
+            <div class="action-reward-group">
+              <span class="reward-pill">+60 XP</span>
+              <button class="btn btn-primary">Mulai</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION: MISI MINGGUAN -->
+        <div class="section-title-row margin-top-lg">
+          <div class="title-with-icon">
+            <div class="icon-circle orange"><i class="ri-calendar-line"></i></div>
+            <div>
+              <h2>Misi Mingguan (Pekan 10)</h2>
+              <p class="sub-title">Berakhir dalam 3 hari pada hari Minggu pukul 23:59 WIB</p>
+            </div>
+          </div>
+          <span class="tag-grand-quest"><i class="ri-star-fill"></i> Grand Quest</span>
+        </div>
+
+        <div class="misi-list">
+
+          <!-- Item Misi Mingguan 1 -->
+          <div class="misi-card weekly-card">
+            <div class="misi-icon-box gray-bg"><i class="ri-arrow-left-right-line"></i></div>
+            <div class="misi-info">
+              <div class="misi-header">
+                <h3>Maraton 100 Soal</h3>
+                <span class="tag-status green-light">64% Selesai</span>
+              </div>
+              <p class="misi-desc">Tuntaskan 100 soal matematika dalam 7 hari di mode kuis apa pun.</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar-sm"><div class="progress-fill teal" style="width: 64%;"></div></div>
+                <div class="progress-labels">
+                  <span>64 Soal Terjawab</span>
+                  <span>Target: 100 Soal</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="chest-reward-box">
+              <div class="chest-icon"><i class="ri-trophy-line"></i></div>
+              <div class="chest-title">Peti Harta Emas</div>
+              <div class="chest-sub">+250 XP & Badge</div>
+              <button class="btn btn-secondary btn-sm">Lanjut Soal</button>
+            </div>
+          </div>
+
+          <!-- Item Misi Mingguan 2 -->
+          <div class="misi-card weekly-card">
+            <div class="misi-icon-box pink-bg"><i class="ri-line-chart-line"></i></div>
+            <div class="misi-info">
+              <div class="misi-header">
+                <h3>Juara Tanpa Salah</h3>
+                <span class="tag-status gray">33% Progres</span>
+              </div>
+              <p class="misi-desc">Perbaiki seluruh soal yang keliru di Lab Kesalahan pekan ini.</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar-sm"><div class="progress-fill blue-purple" style="width: 33%;"></div></div>
+                <div class="progress-labels">
+                  <span>1 / 3 Soal Diperbaiki</span>
+                  <span>Sisa 2 Soal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chest-reward-box purple-theme">
+              <div class="chest-icon"><i class="ri-vip-diamond-line"></i></div>
+              <div class="chest-title">+150 XP</div>
+              <div class="chest-sub">Lab Analisis</div>
+              <button class="btn btn-purple btn-sm">Buka Lab</button>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Kolom Kanan: Shop Hati & Pencapaian Spesial -->
+      <aside class="misi-sidebar">
+
+        <!-- Widget Shop Hati -->
+        <div class="card shop-card">
+          <div class="shop-header">
+            <div class="shop-icon"><i class="ri-fire-fill"></i></div>
+            <div>
+              <h3>Shop Hati</h3>
+              <p>Beli nyawa untuk melanjutkan permainan</p>
+            </div>
+          </div>
+          <p class="shop-note">Pilih paket hati yang sesuai untuk melanjutkan permainan tanpa menunggu waktu regenerasi.</p>
+
+          <div class="shop-items-list">
+            <div class="shop-item">
+              <div class="item-left"><span class="heart-icon"><i class="ri-heart-3-line"></i></span> 1 Hati</div>
+              <div class="item-price">50 Koin</div>
+            </div>
+            <div class="shop-item">
+              <div class="item-left"><span class="heart-icon"><i class="ri-heart-3-line"></i></span> 3 Hati</div>
+              <div class="item-price">120 Koin</div>
+            </div>
+            <div class="shop-item">
+              <div class="item-left"><span class="heart-icon"><i class="ri-heart-3-line"></i></span> 5 Hati</div>
+              <div class="item-price">220 Koin</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widget Pencapaian Spesial -->
+        <div class="card achievement-card">
+          <div class="card-title-row">
+            <h3><i class="ri-trophy-line"></i> Pencapaian Spesial</h3>
+            <a href="#" class="link-see-all">Lihat Semua (18)</a>
+          </div>
+
+          <div class="achievement-list">
+            
+            <!-- Item 1 -->
+            <div class="achievement-item">
+              <div class="achieve-icon orange"><i class="ri-fire-fill"></i></div>
+              <div class="achieve-info">
+                <div class="achieve-header">
+                  <h4>Api Membara</h4>
+                  <span class="level-badge orange">Level 5 Selesai</span>
+                </div>
+                <p>Pertahankan latihan matematika 7 hari berturut-turut tanpa jeda.</p>
+                <div class="progress-bar-sm"><div class="progress-fill orange" style="width: 100%;"></div></div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="achievement-item">
+              <div class="achieve-icon purple"><i class="ri-brain-line"></i></div>
+              <div class="achieve-info">
+                <div class="achieve-header">
+                  <h4>Orang Bijak</h4>
+                  <span class="level-badge purple">Level 8</span>
+                </div>
+                <p>Kumpulkan lebih dari 10.000 XP dari soal matematika adaptif.</p>
+                <div class="progress-bar-sm"><div class="progress-fill purple" style="width: 85%;"></div></div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="achievement-item">
+              <div class="achieve-icon green"><i class="ri-percent-line"></i></div>
+              <div class="achieve-info">
+                <div class="achieve-header">
+                  <h4>Pakar Aljabar & Operasi</h4>
+                </div>
+                <p>Selesaikan 50 kuis matematika dengan akurasi 100% tanpa salah langkah.</p>
+                <div class="progress-bar-sm"><div class="progress-fill green" style="width: 100%;"></div></div>
+                <span class="stat-count">(50/50)</span>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="achievement-item">
+              <div class="achieve-icon gold"><i class="ri-trophy-line"></i></div>
+              <div class="achieve-info">
+                <div class="achieve-header">
+                  <h4>Juara Liga Pythagoras</h4>
+                </div>
+                <p>Mencapai finis di peringkat 3 besar mingguan dalam klasemen liga.</p>
+                <div class="progress-bar-sm"><div class="progress-fill gold" style="width: 75%;"></div></div>
+              </div>
+            </div>
+
+            <!-- Item 5 (Locked) -->
+            <div class="achievement-item locked">
+              <div class="achieve-icon gray"><i class="ri-lock-line"></i></div>
+              <div class="achieve-info">
+                <div class="achieve-header">
+                  <h4>Penakluk Aljabar</h4>
+                </div>
+                <p>Kuasai 15 bab konsep variabel dan persamaan dasar.</p>
+                <div class="progress-bar-sm"><div class="progress-fill gray" style="width: 60%;"></div></div>
+                <span class="stat-count">(9/15)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Numa Edukasi. Matematika Praktis &amp; Menyenangkan.</p>
+    <div class="footer-links">
+      <a href="#" data-popup="bantuan">Bantuan Belajar</a>
+      <a href="#" data-popup="privasi">Privasi</a>
+      <a href="#" data-popup="syarat">Syarat Ketentuan</a>
+      <a href="#" data-popup="status">Status Server</a>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js"></script>
+  <script src="../js/misi.js"></script>
+</body>
+</html>

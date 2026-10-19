@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Lab Kesalahan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style-user.css">
+</head>
+<body data-halaman="lab">
+
+  <!-- Top Navbar -->
+  <!-- Navbar atas (sama di semua halaman user) -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html" class="brand-logo">
+        <span class="logo-icon"><i class="logo-plus">+</i></span>
+        <span class="logo-text">numa<b>.</b></span>
+      </a>
+      <nav class="nav-menu"><a href="path-learning.html" class="nav-item">Belajar</a><a href="quiz.html" class="nav-item">Quiz Kilat</a><a href="lab-kesalahan.html" class="nav-item active">Lab Kesalahan</a><a href="flashcard.html" class="nav-item">Flashcard</a><a href="misi.html" class="nav-item">Misi</a></nav>
+    </div>
+    <div class="nav-right">
+      <div class="badge-item badge-hati" title="Sisa hati"><i class="ri-heart-3-line"></i> <span data-stat="hati">5</span></div>
+      <div class="badge-item badge-api" title="Streak harian"><i class="ri-fire-line"></i> <span data-stat="streak">3</span></div>
+      <div class="badge-item badge-xp" title="Total XP"><i class="ri-vip-diamond-line"></i> <span data-stat="xp">105</span> XP</div>
+      <div class="badge-item badge-koin" title="Koin kamu"><i class="ri-coins-line"></i> <span data-stat="koin">30</span></div>
+      <a href="dashboard.html" class="user-avatar" id="avatarLink" title="Lihat profil">
+        <img src="https://i.pinimg.com/736x/88/e7/95/88e7950465d991d36234663c6e9d2497.jpg" alt="Avatar" onerror="this.style.display='none'">
+      </a>
+    </div>
+  </header>
+
+  <!-- Container Utama -->
+  <main class="dashboard-container">
+    
+    <!-- Hero Banner Lab Kesalahan -->
+    <section class="lab-hero-banner">
+      <div class="lab-badge-tag">
+        <span class="icon"><i class="ri-microscope-line"></i></span> DIAGNOSTIK ADAPTIF BERBASIS AI
+      </div>
+      <h1 class="lab-hero-title">Lab Kesalahan & Diagnostik Pintar</h1>
+      <p class="lab-hero-desc">
+        Pahami letak kesalahanmu di kuis & modul sebelumnya. Perbaiki untuk memulihkan hati dan raih kembali XP penuh!
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-pills-row">
+        <button class="filter-btn active">Semua <span class="badge-count navy">3</span></button>
+        <button class="filter-btn">Salah Perhitungan Aritmatika <span class="badge-count">1</span></button>
+        <button class="filter-btn">Keliru Konsep Rumus <span class="badge-count">1</span></button>
+        <button class="filter-btn">Kecurigaan Teliti Tanda +/- <span class="badge-count">1</span></button>
+      </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <div class="lab-grid">
+
+      <!-- Kolom Kiri: Daftar Soal & Remedial -->
+      <section class="lab-main-section">
+        
+        <!-- Active Remedial Card (Soal Utamakan Pembenahan) -->
+        <div class="remedial-card active-item">
+          
+          <div class="card-top-bar">
+            <div class="tag-group">
+              <span class="tag-blue"><i class="ri-flashlight-fill"></i> Quiz Kilat - Operasi Dasar Level 3</span>
+              <span class="tag-orange-light">Perlu Dibenahi</span>
+            </div>
+            <div class="potential-xp">
+              <span class="star-icon"><i class="ri-star-fill"></i></span> +20 XP Potensial
+            </div>
+          </div>
+
+          <div class="question-box">
+            <span class="question-label">SOAL MATEMATIKA</span>
+            <div class="question-math">
+              Hitung hasil dari: <span class="math-highlight">-15 + 8 × (-3) = ?</span>
+            </div>
+          </div>
+
+          <!-- Diagnostic Explanation Grid -->
+          <div class="diagnostic-grid">
+            <div class="wrong-answer-box">
+              <div class="box-title text-red">
+                <span class="icon-close"><i class="ri-close-line"></i></span> JAWABAN KAMU SEBELUMNYA
+              </div>
+              <div class="wrong-val">-21</div>
+              <p class="wrong-desc">Kamu menjumlahkan <span class="highlight-red">(-15 + 8)</span> terlebih dahulu sebelum dikalikan (-3).</p>
+            </div>
+
+            <div class="solution-box">
+              <div class="box-title text-purple">
+                <span class="icon-bulb"><i class="ri-lightbulb-line"></i></span> PENJELASAN KUNCI & DIAGNOSTIK
+              </div>
+              <div class="solution-text">
+                <strong>Hierarki Operasi (PEMDAS/KABATAKU):</strong> Perkalian memiliki derajat lebih tinggi daripada penjumlahan!
+              </div>
+              <div class="step-list">
+                <div>Langkah 1: 8 × (-3) = -24</div>
+                <div>Langkah 2: -15 + (-24) = <span class="green-val">-39</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Verification Area -->
+          <div class="verification-area">
+            <label class="input-label"><span class="icon-bars"><i class="ri-edit-box-line"></i></span> Ketik jawaban yang benar sekarang:</label>
+            <span class="chance-tag">Kesempatan 1 dari 2</span>
+            
+            <div class="input-action-row">
+              <input type="text" class="input-answer" placeholder="Masukkan angka...">
+              <button class="btn btn-verify">
+                <span class="icon-check"><i class="ri-check-line"></i></span> Verifikasi Perbaikan (+20 XP)
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Remedial Item 2 (Mini) -->
+        <div class="remedial-card mini-item">
+          <div class="mini-card-header">
+            <div class="tag-group">
+              <span class="tag-gray">Modul Aljabar 1.2</span>
+              <span class="tag-warning-text"><i class="ri-error-warning-line"></i> Keliru Konsep Suku Sejenis</span>
+            </div>
+            <span class="xp-tag"><i class="ri-vip-diamond-line"></i> +15 XP</span>
+          </div>
+          <div class="mini-question-title">
+            <span class="muted">Soal Menunggu Remedial:</span>
+            <h3>Sederhanakan bentuk: (2x - 3)(x + 4)</h3>
+          </div>
+          <p class="mini-eval-note"><strong>Catatan Evaluasi:</strong> Lupa mengalikan suku tengah (-3x + 8x) saat menggunakan metode distribusi FOIL.</p>
+          <div class="mini-action-row">
+            <button class="btn btn-retry">
+              Latih Ulang Soal Ini <span><i class="ri-arrow-right-s-line"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remedial Item 3 (Mini) -->
+        <div class="remedial-card mini-item">
+          <div class="mini-card-header">
+            <div class="tag-group">
+              <span class="tag-gray">Teorema Pythagoras</span>
+              <span class="tag-warning-text"><i class="ri-ruler-2-line"></i> Salah Kuadrat Bilangan</span>
+            </div>
+            <span class="xp-tag"><i class="ri-vip-diamond-line"></i> +15 XP</span>
+          </div>
+          <div class="mini-question-title">
+            <span class="muted">Soal Menunggu Remedial:</span>
+            <h3>Sisi miring segitiga siku-siku dengan alas 9 cm dan tinggi 12 cm.</h3>
+          </div>
+          <p class="mini-eval-note"><strong>Catatan Evaluasi:</strong> Kesalahan hitung pada penjabaran 9² + 12² = 81 + 144 = 225.</p>
+          <div class="mini-action-row">
+            <button class="btn btn-retry">
+              Latih Ulang Soal Ini <span><i class="ri-arrow-right-s-line"></i></span>
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Kolom Kanan: Pola Titik Lemah & Tips AI -->
+      <aside class="lab-sidebar">
+
+        <!-- Pola Titik Lemah Donut Widget -->
+        <div class="card weakpoint-card">
+          <div class="card-title-row">
+            <h3><span class="icon-donut"><i class="ri-donut-chart-line"></i></span> Pola Titik Lemah</h3>
+            <span class="time-reset">Update Otomatis</span>
+          </div>
+          <p class="widget-desc">Algoritma kami mendeteksi materi yang memerlukan perhatian ekstra berdasarkan riwayat kuis:</p>
+
+          <!-- Donut Chart Canvas Simulation -->
+          <div class="donut-container">
+            <div class="donut-chart">
+              <div class="donut-inner">
+                <span class="percentage">65%</span>
+                <span class="status-label">RENTAN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weakness Progress Bars -->
+          <div class="weakness-list">
+            <div class="weakness-item">
+              <div class="weakness-label">
+                <span class="dot red">●</span> Ketelitian Tanda Negatif (+/-)
+                <span class="val red">65% (Perlu Latihan)</span>
+              </div>
+              <div class="progress-bar-sm"><div class="progress-fill red" style="width: 65%;"></div></div>
+            </div>
+
+            <div class="weakness-item">
+              <div class="weakness-label">
+                <span class="dot green">●</span> Geometri & Pythagoras
+                <span class="val green">88% (Aman)</span>
+              </div>
+              <div class="progress-bar-sm"><div class="progress-fill green" style="width: 88%;"></div></div>
+            </div>
+
+            <div class="weakness-item">
+              <div class="weakness-label">
+                <span class="dot blue">●</span> Aljabar Pemula
+                <span class="val blue">92% (Aman)</span>
+              </div>
+              <div class="progress-bar-sm"><div class="progress-fill blue" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <!-- AI Advice Card -->
+          <div class="ai-tips-box">
+            <span class="ai-icon"><i class="ri-lightbulb-line"></i></span>
+            <p><strong>Tips AI Numa:</strong> Berikan tanda kurung tambahan pada angka negatif seperti <code>(-3)</code> di kertas coretan agar tidak tertukar tanda minus dan kurang.</p>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Numa Edukasi. Matematika Praktis &amp; Menyenangkan.</p>
+    <div class="footer-links">
+      <a href="#" data-popup="bantuan">Bantuan Belajar</a>
+      <a href="#" data-popup="privasi">Privasi</a>
+      <a href="#" data-popup="syarat">Syarat Ketentuan</a>
+      <a href="#" data-popup="status">Status Server</a>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js"></script>
+  <script src="../js/lab.js"></script>
+</body>
+</html>

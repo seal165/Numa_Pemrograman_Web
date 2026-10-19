@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Belajar Matematika Jadi Seru & Nagih</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="landing-header">
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">
+          <span class="plus">+</span>
+          <span class="dot"></span>
+        </div>
+        <span class="logo-text">numa<span class="dot-purple">.</span></span>
+      </div>
+
+      <nav class="landing-nav">
+        <a href="#fitur" class="nav-item">Fitur Komprehensif</a>
+        <a href="#exploratory-section" class="nav-item">Eksplorasi</a>
+      </nav>
+
+      <div class="header-auth-btns">
+        <a href="register.html" class="btn-landing-outline">Daftar</a>
+        <a href="login.html" class="btn-landing-primary">Masuk</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="landing-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        
+        <div class="hero-text-col">
+          <div class="badge-pill">
+            <span class="dot-signal">●</span> GENERASI BARU BELAJAR MATEMATIKA 🚀
+          </div>
+          <h1 class="hero-title">
+            Belajar Matematika Jadi <span class="highlight-purple">Seru &amp; Nagih</span> Lewat Gamifikasi Interaktif
+          </h1>
+          <p class="hero-desc">
+            Platform Pembelajaran Matematika Interaktif Berbasis Gamifikasi. Taklukkan aljabar, geometri, hingga statistika lewat quiz kilat, flashcard cerdas, misi harian, dan kumpulkan ribuan XP menuju tahta Liga Berlian!
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="register.html" class="btn-hero-main">Mulai Petualangan Gratis (Daftar) &rarr;</a>
+          </div>
+
+          <div class="hero-features-trust">
+            <span class="trust-item">✓ 100% Gratis &amp; Sesuai Kurikulum</span>
+            <span class="trust-item">⚡ 5 Menit Sehari Langsung Paham</span>
+          </div>
+        </div>
+
+        <!-- Interactive Preview Card (QUIZ INTERAKTIF) -->
+        <div class="hero-preview-col">
+          <div class="quiz-preview-card" id="quizCard">
+            <div class="card-top-bar">
+              <div class="quiz-tag-group">
+                <span class="tag-title">TANTANGAN KILAT</span>
+                <span class="tag-sub">Level 3 • Aljabar</span>
+              </div>
+              <div class="timer-badge" id="timerBadge">⏱ 01:00</div>
+            </div>
+
+            <div class="quiz-progress-bar">
+              <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+
+            <div class="question-box">
+              <span class="question-number" id="questionNumber">SOAL 1 DARI 5</span>
+              <h3 class="question-text" id="questionText">Memuat soal...</h3>
+            </div>
+
+            <div class="options-grid" id="optionsGrid">
+              <!-- Opsi akan di-generate oleh JavaScript -->
+            </div>
+
+            <div class="card-footer-info">
+              <span class="hint-link" id="hintLink">💡 Petunjuk Rumus</span>
+              <span class="streak-active-tag" id="scoreTag">🔥 Skor: 0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stats Counter Banner -->
+      <div class="stats-banner">
+        <div class="stat-item">
+          <h2 class="stat-number">45.000+</h2>
+          <p class="stat-title">Siswa Aktif Belajar</p>
+          <span class="stat-sub">Dari 34 Provinsi di Indonesia</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h2 class="stat-number">1.2 Juta</h2>
+          <p class="stat-title">Soal Diselesaikan</p>
+          <span class="stat-sub">Dengan akurasi rata-rata 86%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fitur" class="features-section">
+      <div class="section-header center">
+        <span class="badge-pill">::: Fitur Komprehensif</span>
+        <h2 class="section-title">8 Senjata Rahasia Matematika Jadi Menyenangkan</h2>
+        <p class="section-desc">
+          Dirancang khusus untuk menghapus rasa takut pada angka lewat teknik psikologi kognitif dan kepuasan bermain game.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon bg-purple">🎯</div>
+          <h3>Quiz Interaktif &amp; Adaptif</h3>
+          <p>Tantangan waktu kilat berjenjang yang menyesuaikan kesulitan soal dengan kecepatan berpikirmu secara dinamis.</p>
+          <a href="#" class="feature-link">Jelajahi Soal &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-green">🎴</div>
+          <h3>Flashcard &amp; Repetisi</h3>
+          <p>Kuasai rumus esensial dengan algoritma spaced repetition pintar agar memori jangka panjang terbentuk otomatis.</p>
+          <a href="#" class="feature-link">Hafal Cepat &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-amber">☑️</div>
+          <h3>Misi Harian &amp; Quest</h3>
+          <p>Selesaikan target misi 24 jam dan tantangan bos mingguan untuk mengumpulkan peti harta karun berisi reward ekstra.</p>
+          <a href="#" class="feature-link">Klaim Peti &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-indigo">📊</div>
+          <h3>Peringkat &amp; Liga Siswa</h3>
+          <p>Bersaing sportif dari Liga Perunggu hingga Liga Berlian bersama teman sekelas maupun siswa seluruh Indonesia.</p>
+          <a href="#" class="feature-link">Cek Klasemen &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-orange">🔥</div>
+          <h3>XP &amp; Api Streak Harian</h3>
+          <p>Pertahankan api belajar tanpa putus setiap hari, raih multiplier bonus XP, dan naikkan level akunmu setinggi mungkin.</p>
+          <a href="#" class="feature-link">Nyalakan Api &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-teal">🏅</div>
+          <h3>Lencana &amp; Trofi Koleksi</h3>
+          <p>Buka puluhan lencana eksklusif seperti 'Pakar Aljabar', 'Penembak Kilat', dan pamerkan ke etalase profil pribadimu.</p>
+          <a href="#" class="feature-link">Koleksi Saya &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-blue">↪️</div>
+          <h3>Solusi Step-by-Step</h3>
+          <p>Bukan hanya tahu jawaban benar, tapi dipandu runtut cara menjabarkannya dengan visualisasi rumus yang mudah dipahami.</p>
+          <a href="#" class="feature-link">Lihat Contoh Solusi &rsaquo;</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-red">🔄</div>
+          <h3>Lab Review Kesalahan</h3>
+          <p>Semua soal yang pernah kamu jawab salah tersimpan otomatis untuk dilatih kembali hingga kamu benar-benar menguasainya.</p>
+          <a href="#" class="feature-link">Buka Lab Review &rsaquo;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="exploratory-section" id="exploratory-section">
+      <div class="exploratory-container">
+        <div class="exploratory-text">
+          <span class="section-tag-blue">🧮 PENGALAMAN EKSPLORATIF</span>
+          <h2>Bukan Sekadar Menghafal, Tapi Paham Logikanya</h2>
+          <p>
+            Ketika salah, Numa tidak menghukummu. Sistem kami membongkar rumus ke dalam potongan-potongan visual interaktif sehingga kamu menemukan sendiri letak kekeliruan perhitunganmu.
+          </p>
+
+          <div class="exploratory-list">
+            <div class="exploratory-item">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Pemisahan Suku &amp; Variabel Interaktif</strong>
+                <p>Sentuh variabel untuk memindahkannya ke sisi persamaan lain secara visual.</p>
+              </div>
+            </div>
+            <div class="exploratory-item">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Deteksi Lubang Konseptual Otomatis</strong>
+                <p>AI Numa menganalisis apakah kekeliruan terjadi karena tanda negatif, pecahan, atau faktorisasi.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="link-action-purple">Jajal Modul Simulasi Lengkap &rarr;</a>
+        </div>
+
+        <div class="exploratory-preview">
+          <div class="code-sim-card">
+            <div class="code-card-header">
+              <div class="traffic-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+                <span class="sim-filename">Lab_Solusi_Aljabar.math</span>
+              </div>
+              <span class="sim-tag">Solusi Langkah Demi Langkah</span>
+            </div>
+
+            <div class="math-main-box">
+              3x + 7 = 22
+            </div>
+
+            <div class="step-card-list">
+              <div class="step-item">
+                <span class="step-num">1</span>
+                <div class="step-content">
+                  <strong>Kurangkan kedua ruas dengan angka 7</strong>
+                  <code>3x + 7 - 7 = 22 - 7</code>
+                  <div class="highlight-res">3x = 15</div>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-num">2</span>
+                <div class="step-content">
+                  <strong>Bagi kedua ruas dengan koefisien x (yaitu 3)</strong>
+                  <code>3x / 3 = 15 / 3</code>
+                  <div class="highlight-res text-green">x = 5</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="verified-badge">
+              <span>✓ Terbukti Akurat: 3(5) + 7 = 22</span>
+              <span class="accuracy-badge">Benar 100%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta-section">
+      <div class="cta-banner-card">
+        <div class="cta-content">
+          <span class="badge-pill-light">🚀 Bergabung Sekarang Gratis</span>
+          <h2>Siap Taklukkan Matematika Hari Ini?</h2>
+          <p>Buat akun dalam 30 detik dan buktikan bahwa matematika itu seru dan menantang!</p>
+        </div>
+        <div class="cta-actions">
+          <a href="register.html" class="btn-cta-green">Daftar Akun Gratis 👤+</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="landing-footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo">
+          <div class="logo-icon">
+            <span class="plus">+</span>
+          </div>
+          <span class="logo-text">numa<span class="dot-purple">.</span></span>
+        </div>
+        <p class="brand-desc">
+          Petualangan belajar matematika interaktif dengan simulasi taktis, latihan adaptif, dan tantangan gamifikasi seru.
+        </p>
+        <span class="curriculum-badge">🎓 Kurikulum Merdeka Siap</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kurikulum &amp; Materi</h4>
+        <ul>
+          <li><a href="#">Aljabar Dasar &amp; Menengah</a></li>
+          <li><a href="#">Geometri &amp; Bangun Ruang</a></li>
+          <li><a href="#">Trigonometri Praktis</a></li>
+          <li><a href="#">Statistika &amp; Peluang</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Fitur Gamifikasi</h4>
+        <ul>
+          <li><a href="misi.html">Misi Tantangan 24 Jam</a></li>
+          <li><a href="#">Koleksi Lencana Master</a></li>
+          <li><a href="#">Papan Peringkat Liga Berlian</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pusat Belajar</h4>
+        <ul>
+          <li><a href="flashcard.html">Bank Rumus Lengkap</a></li>
+          <li><a href="#">Bantuan &amp; FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Numa Edukasi Nusantara. Hak cipta dilindungi undang-undang.</p>
+      <div class="footer-legal-links">
+        <a href="#">Privasi</a>
+        <a href="#">Syarat Ketentuan</a>
+        <a href="#">Status Server</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="js/quiz.js"></script>
+
+</body>
+</html>

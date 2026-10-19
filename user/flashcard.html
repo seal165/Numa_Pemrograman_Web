@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numa - Flashcard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style-user.css">
+</head>
+<body data-halaman="flashcard">
+
+  <!-- Top Navbar -->
+  <!-- Navbar atas (sama di semua halaman user) -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="dashboard.html" class="brand-logo">
+        <span class="logo-icon"><i class="logo-plus">+</i></span>
+        <span class="logo-text">numa<b>.</b></span>
+      </a>
+      <nav class="nav-menu"><a href="path-learning.html" class="nav-item">Belajar</a><a href="quiz.html" class="nav-item">Quiz Kilat</a><a href="lab-kesalahan.html" class="nav-item">Lab Kesalahan</a><a href="flashcard.html" class="nav-item active">Flashcard</a><a href="misi.html" class="nav-item">Misi</a></nav>
+    </div>
+    <div class="nav-right">
+      <div class="badge-item badge-hati" title="Sisa hati"><i class="ri-heart-3-line"></i> <span data-stat="hati">5</span></div>
+      <div class="badge-item badge-api" title="Streak harian"><i class="ri-fire-line"></i> <span data-stat="streak">3</span></div>
+      <div class="badge-item badge-xp" title="Total XP"><i class="ri-vip-diamond-line"></i> <span data-stat="xp">105</span> XP</div>
+      <div class="badge-item badge-koin" title="Koin kamu"><i class="ri-coins-line"></i> <span data-stat="koin">30</span></div>
+      <a href="dashboard.html" class="user-avatar" id="avatarLink" title="Lihat profil">
+        <img src="https://i.pinimg.com/736x/88/e7/95/88e7950465d991d36234663c6e9d2497.jpg" alt="Avatar" onerror="this.style.display='none'">
+      </a>
+    </div>
+  </header>
+
+  <!-- Container Utama -->
+  <main class="dashboard-container">
+    
+    <!-- Hero Banner Flashcard -->
+    <section class="flashcard-hero-banner">
+      <div class="flash-badge-tag">
+        <span class="icon"><i class="ri-stack-line"></i></span> SPACED REPETITION ARENA
+      </div>
+      <h1 class="flash-hero-title">Flashcard Rumus & Teorema</h1>
+      <p class="flash-hero-desc">
+        Latih daya ingat formula visual tanpa menghafal buta. Putar kartu, telaah pembuktian intuitif, dan klasifikasikan penguasaan konsepmu.
+      </p>
+
+      <!-- Topic Filter & Actions -->
+      <div class="flash-filter-row">
+        <div class="filter-pills-row">
+          <button class="filter-btn active">Semua Topik (24)</button>
+          <button class="filter-btn">Aljabar Linear</button>
+          <button class="filter-btn">Geometri & Bangun</button>
+          <button class="filter-btn">Pecahan & Desimal</button>
+          <button class="filter-btn">Teorema Pythagoras</button>
+        </div>
+        <button class="btn-shuffle"><span class="icon"><i class="ri-shuffle-line"></i></span> Acak Deck</button>
+      </div>
+    </section>
+
+    <!-- Tracker Progress -->
+    <div class="card-tracker-bar">
+      <div class="tracker-info">
+        <strong>Kartu #4</strong> <span class="muted">dari 24 Kartu</span>
+      </div>
+      <div class="progress-bar-sm tracker-progress">
+        <div class="progress-fill blue" style="width: 16%;"></div>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="flashcard-grid">
+
+      <!-- Kolom Kiri: Flashcard Interactive Area -->
+      <section class="flashcard-main-area">
+        
+        <!-- FLIP CARD CONTAINER -->
+        <div class="flip-card-wrapper" id="flashcardWrapper">
+          <div class="flip-card-inner">
+            
+            <!-- TAMPILAN 1: SISI DEPAN (SOAL) -->
+            <div class="card-face card-front">
+              <div class="card-header-bar">
+                <span class="tag-topic">● ALJABAR & EKSPONEN</span>
+                <button class="btn-flip-trigger">
+                  <span class="icon"><i class="ri-flip-horizontal-line"></i></span> Klik untuk Balik
+                </button>
+              </div>
+
+              <div class="card-body-content">
+                <span class="badge-subtopic">Tantangan Logika Pemfaktoran</span>
+                <h2 class="card-question-text">
+                  Bagaimana rumus pemfaktoran selisih dua kuadrat dari bentuk aljabar berikut?
+                </h2>
+
+                <div class="math-display-box">
+                  a² - b²
+                </div>
+
+                <div class="hint-box">
+                  <span class="icon"><i class="ri-lightbulb-line"></i></span> Ingat perkalian sekawan yang saling menghilangkan suku tengah.
+                </div>
+              </div>
+            </div>
+
+            <!-- TAMPILAN 2: SISI BELAKANG (JAWABAN & PEMBUKTIAN) -->
+            <div class="card-face card-back">
+              <div class="card-header-bar">
+                <span class="tag-topic">● ALJABAR & EKSPONEN</span>
+                <button class="btn-flip-trigger">
+                  <span class="icon"><i class="ri-flip-horizontal-line"></i></span> Klik untuk Balik
+                </button>
+              </div>
+
+              <div class="card-body-content">
+                <div class="solution-hero-box">
+                  <span class="solution-subtitle">IDENTITAS ALJABAR UTAMA</span>
+                  <h2 class="solution-formula">a² - b² = (a - b)(a + b)</h2>
+                  <p class="solution-equiv">Atau secara ekuivalen: <strong>(a + b)(a - b)</strong> (berlaku sifat komutatif perkalian).</p>
+
+                  <div class="fast-intuition-note">
+                    <span class="icon"><i class="ri-lightbulb-line"></i></span> <strong>Intuisi Cepat:</strong> Suku tengah saling menghapus karena: <strong>a(b) + (-b)(a) = ab - ba = 0</strong>. Jadi perkalian faktor sekawan mengeliminasi suku linier!
+                  </div>
+                </div>
+
+                <!-- Steps Breakdown -->
+                <div class="proof-section">
+                  <h3 class="proof-title"><span class="icon">Σ</span> Langkah Pembuktian Aljabar (Distributif FOIL)</h3>
+                  <div class="proof-steps-grid">
+                    <div class="proof-step-card">
+                      <div class="step-num-badge">1</div>
+                      <span class="step-tag">Suku Pertama</span>
+                      <div class="step-math">a × a = a²</div>
+                      <p class="step-desc">Kalikan variabel depan satu sama lain.</p>
+                    </div>
+
+                    <div class="proof-step-card">
+                      <div class="step-num-badge">2</div>
+                      <span class="step-tag">Luar & Dalam</span>
+                      <div class="step-math">ab - ba = 0</div>
+                      <p class="step-desc">a × b + (-b) × a saling meniadakan.</p>
+                    </div>
+
+                    <div class="proof-step-card">
+                      <div class="step-num-badge">3</div>
+                      <span class="step-tag">Suku Terakhir</span>
+                      <div class="step-math">(-b) × b = -b²</div>
+                      <p class="step-desc">Perkalian tanda berbeda menghasilkan negatif.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mental Math Trick Box -->
+                <div class="mental-math-box">
+                  <div class="mental-header">
+                    <div class="mental-title"><span class="icon"><i class="ri-calculator-line"></i></span> Aplikasi Berhitung Mental Cepat</div>
+                    <span class="tag-trick">Trik Ujian</span>
+                  </div>
+                  <p class="mental-question">Hitung <span class="highlight-math">105² - 95²</span> tanpa bantuan kalkulator!</p>
+                  
+                  <div class="mental-calc-row">
+                    <div class="calc-step">= (105 + 95)(105 - 95)</div>
+                    <div class="calc-result">= (200) × (10) = <span class="green-bold">2.000</span></div>
+                    <span class="calc-tag">(Sangat praktis & presisi!)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navigation Controls & Self-Assessment Buttons -->
+        <div class="card-controls-row">
+          <button class="btn-nav-prev"><span class="icon"><i class="ri-arrow-left-line"></i></span> Sebelumnya</button>
+          <button class="btn-nav-next">Lanjut <span class="icon"><i class="ri-arrow-right-line"></i></span></button>
+        </div>
+
+        <div class="assessment-row">
+          <button class="btn-assess assess-red">
+            <span class="emoji">😵</span> Belum Paham
+            <span class="icon-refresh"><i class="ri-restart-line"></i></span>
+          </button>
+          <button class="btn-assess assess-yellow">
+            <span class="emoji">🙂</span> Lumayan Paham
+            <span class="icon-refresh"><i class="ri-restart-line"></i></span>
+          </button>
+          <button class="btn-assess assess-green active">
+            <span class="emoji">😎</span> Sangat Paham
+            <span class="icon-star"><i class="ri-star-fill"></i></span>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- Kolom Kanan: Visual Intuisi & Antrean Kartu -->
+      <aside class="flashcard-sidebar">
+
+        <!-- Visual Intuition Card -->
+        <div class="card visual-card">
+          <div class="card-title-row">
+            <h3><span class="icon"><i class="ri-eye-line"></i></span> Visual Intuisi</h3>
+            <span class="tag-2d">2D Area</span>
+          </div>
+
+          <!-- Diagram Area SVG/CSS -->
+          <div class="area-diagram-box">
+            <div class="diagram-graphic">
+              <div class="square-a">
+                <div class="sub-rect top-rect">
+                  <span class="label-a">(a-b)b</span>
+                  <span class="label-b">b²</span>
+                </div>
+                <div class="sub-rect bottom-rect">
+                  <span class="label-main">(a-b)a</span>
+                </div>
+              </div>
+            </div>
+            <p class="diagram-caption">Selisih area persegi dipartisi menjadi dua balok kongruen yang disatukan.</p>
+          </div>
+
+          <div class="intuition-tip">
+            <span class="icon"><i class="ri-lightbulb-line"></i></span> Rumus ini adalah dasar perkalian cepat mental math dan penyederhanaan bentuk akar irasional.
+          </div>
+        </div>
+
+        <!-- Card Queue List -->
+        <div class="card queue-card">
+          <div class="card-title-row">
+            <h3>Antrean Kartu Berikutnya</h3>
+            <span class="queue-count">20 Tersisa</span>
+          </div>
+
+          <div class="queue-list">
+            <div class="queue-item">
+              <div class="queue-icon-box"><i class="ri-ruler-2-line"></i></div>
+              <div class="queue-info">
+                <h4>Luas Permukaan Tabung</h4>
+                <p>L = 2πr(r + t)</p>
+              </div>
+              <span class="arrow-icon"><i class="ri-arrow-right-s-line"></i></span>
+            </div>
+
+            <div class="queue-item">
+              <div class="queue-icon-box"><i class="ri-line-chart-line"></i></div>
+              <div class="queue-info">
+                <h4>Persamaan Garis Lurus</h4>
+                <p>y = mx + c (Gradien & Titik Potong)</p>
+              </div>
+              <span class="arrow-icon"><i class="ri-arrow-right-s-line"></i></span>
+            </div>
+
+            <div class="queue-item">
+              <div class="queue-icon-box"><i class="ri-percent-line"></i></div>
+              <div class="queue-info">
+                <h4>Aturan Eksponen Perkalian</h4>
+                <p>aᵐ × aⁿ = aᵐ⁺ⁿ</p>
+              </div>
+              <span class="arrow-icon"><i class="ri-arrow-right-s-line"></i></span>
+            </div>
+
+            <div class="queue-item">
+              <div class="queue-icon-box"><i class="ri-ruler-2-line"></i></div>
+              <div class="queue-info">
+                <h4>Hukum Pythagoras</h4>
+                <p>c² = a² + b² (Sisi Miring)</p>
+              </div>
+              <span class="arrow-icon"><i class="ri-arrow-right-s-line"></i></span>
+            </div>
+          </div>
+
+          <div class="queue-footer">
+            <a href="#" class="view-all-link"><i class="ri-eye-line"></i> Lihat Seluruh 24 Kartu</a>
+            <span class="deck-version">Deck v2.4</span>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Numa Edukasi. Matematika Praktis &amp; Menyenangkan.</p>
+    <div class="footer-links">
+      <a href="#" data-popup="bantuan">Bantuan Belajar</a>
+      <a href="#" data-popup="privasi">Privasi</a>
+      <a href="#" data-popup="syarat">Syarat Ketentuan</a>
+      <a href="#" data-popup="status">Status Server</a>
+    </div>
+  </footer>
+
+  
+
+
+  <script src="../js/app.js"></script>
+  <script src="../js/flashcard.js"></script>
+</body>
+</html>

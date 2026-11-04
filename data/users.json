@@ -1,0 +1,34 @@
+[
+    {
+        "username": "jey_math",
+        "email": "jey.pratama@sekolah.sch.id",
+        "nama": "Jey Raditya Pratama",
+        "role": "siswa",
+        "password": "$2y$10$awo.jmtvF0s\/1ytPS7Ckeexy898JFohYH73pkI3hM8qktc5X8PA7O",
+        "dibuat": 1793779544
+    },
+    {
+        "username": "arka_juara",
+        "email": "arka@sekolah.sch.id",
+        "nama": "Arka Juara",
+        "role": "siswa",
+        "password": "$2y$10$krQ.O9YrS0fTdaLN8oUrbO7Y8Mm\/c1hCbmQlHY.x1iTYLA55pK9oe",
+        "dibuat": 1793779544
+    },
+    {
+        "username": "admin",
+        "email": "admin@numa.id",
+        "nama": "Alya Rahmani",
+        "role": "admin",
+        "password": "$2y$10$7mldyTsJMaN323Ezs1GpwOnY4ySzTmchhVU0kMHE11\/fVH6OYQ7tm",
+        "dibuat": 1793779544
+    },
+    {
+        "username": "radit123",
+        "email": "radit123@gmail.com",
+        "nama": "Raditya",
+        "role": "siswa",
+        "password": "$2y$10$HCjThqlbKCdtYQ3s8I2jXeAxLnRgulnA\/OCxHGR34deihSiHh.6Se",
+        "dibuat": 1793779611
+    }
+]
